@@ -15,6 +15,19 @@
         * Checkout the icons or logo for each variable to knows its type in the variables window during debug mode
             * P = parameters
             * Watch(More like glass) Icon = watches
+* Helpful tips, check out for
+    * Show execution point - cursor jumps to the execution point
+    * Step over
+    * Step into - intellij skips going into jdk method calls (assumes that the bug might not be there in JDK)
+    * Force step into - to "step into" JDK methods or any third party method calls
+    * Step out - return to the caller from the current method
+    * Drop frame - drops the current frame (check the "frames" window)
+        * Can't drop all kinds (exception: database connection, network traffic etc.)
+        * Only changes to local variables will be reverted
+    * Run to cursor
+    * ALWAYS use "resume program" to finish off the debugging flow
+        * To avoid any problems with applications that has any network or database connections
+    * "Resume program" and "Run program" are entirely different
 * Source Code analysis
     * Run the source code for this branch and observe the execution fails
     * Use debugger to examine where it went wrong
