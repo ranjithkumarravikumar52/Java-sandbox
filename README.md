@@ -14,7 +14,13 @@
         * Can examine all the variables in a method from a stack trace (Frames)
         * Checkout the icons or logo for each variable to knows its type in the variables window during debug mode
             * P = parameters
-            * Watch Icon = watches
+            * Watch(More like glass) Icon = watches
+* Source Code analysis
+    * Run the source code for this branch and observe the execution fails
+    * Use debugger to examine where it went wrong
+        * Should notice that instance variable and local variable inside add char method points to same object 
+        * Value gets appended to this object repeatedly till the memory is full
+        * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
 
 #### Thanks and Credits
 * Inspired and learned these information from [Tim Buchalka](https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview)
