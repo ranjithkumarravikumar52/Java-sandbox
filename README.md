@@ -67,6 +67,7 @@
     * runs only once after every tests
 * Writing Tests for methods which throws exception
     * In the annotation include, `(excpeted = typeofexception.class)`
+    * Or can also use try-catch block
 
 
 
