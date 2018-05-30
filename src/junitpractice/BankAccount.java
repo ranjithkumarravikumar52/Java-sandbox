@@ -1,6 +1,5 @@
 package junitpractice;
 
-
 public class BankAccount {
 
     private String firstName;
