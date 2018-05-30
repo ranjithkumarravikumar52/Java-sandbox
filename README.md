@@ -28,12 +28,17 @@
     * ALWAYS use "resume program" to finish off the debugging flow
         * To avoid any problems with applications that has any network or database connections
     * "Resume program" and "Run program" are entirely different
-* Source Code analysis
-    * Run the source code for this branch and observe the execution fails
-    * Use debugger to examine where it went wrong
-        * Should notice that instance variable and local variable inside add char method points to same object 
-        * Value gets appended to this object repeatedly till the memory is full
-        * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
+    * Add any variable to watch point to examine its value during debug
+    * Field watch points - whenever the value is changed, the application suspends
+        * Use ALT+left click to set up field watch point.
+    * Smart step into - gives us options to choose the method to step into
+
+#### Source Code analysis
+* Run the source code for this branch and observe the execution fails
+* Use debugger to examine where it went wrong
+    * Should notice that instance variable and local variable inside add char method points to same object 
+    * Value gets appended to this object repeatedly till the memory is full
+    * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
 
 #### Thanks and Credits
 * Inspired and learned these information from [Tim Buchalka](https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview)
