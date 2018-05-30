@@ -59,6 +59,14 @@
 * So, only one assert per test method/condition
 * Using filters to examine all your tests
 * When testing a value against true or false, use assertTrue or assertFalse
+* `@Before` 
+    * runs before every tests
+* `@BeforeClass`
+    * runs only once before any tests 
+* `@AfterClass`
+    * runs only once after every tests
+* Writing Tests for methods which throws exception
+    * In the annotation include, `(excpeted = typeofexception.class)`
 
 
 
