@@ -48,8 +48,17 @@
 * However, it becomes a problematic if the method changes, then the test values has to be re-changed
 * To avoid, people make use of testing framework.
 * In this branch we gonna use java's testing framework called JUnit to run automated tests in our code
-* Easiest way to create testclass is using `Alt + Enter` on the current class
+* Easiest way to create test class is using `Alt + Enter` on the current class
 * Scope is `compile time` for the Test class
+* Test methods should always be `public` and return type `void`
+* Create a test method with annotations `@org.junit.Test` right above the method to enable IDE to test that method
+* `Assert(expectedResult, actualResult)`
+* We can have more than one assertion in a method, however it's a bad practice because
+    * Test method should always be self-contained
+    * Test method should run independently
+* So, only one assert per test method/condition
+* Using filters to examine all your tests
+* When testing a value against true or false, use assertTrue or assertFalse
 
 
 
