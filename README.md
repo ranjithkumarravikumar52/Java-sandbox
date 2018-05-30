@@ -48,6 +48,8 @@
 * However, it becomes a problematic if the method changes, then the test values has to be re-changed
 * To avoid, people make use of testing framework.
 * In this branch we gonna use java's testing framework called JUnit to run automated tests in our code
+* Easiest way to create testclass is using `Alt + Enter` on the current class
+* Scope is `compile time` for the Test class
 
 
 
