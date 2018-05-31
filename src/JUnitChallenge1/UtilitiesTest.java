@@ -1,9 +1,7 @@
 package JUnitChallenge1;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class UtilitiesTest {
 
@@ -27,7 +25,7 @@ public class UtilitiesTest {
         char[] actual = util.everyNthChar(input, n);
 
         //test
-        assertEquals(output, actual);
+        assertArrayEquals(output, actual);
     }
 
     @org.junit.Test
