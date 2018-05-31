@@ -14,7 +14,7 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void everyNthChar() {
-        //Input: h, e, l, l, o; n = 2
+/*        //Input: h, e, l, l, o; n = 2
         char[] input = {'h', 'e', 'l', 'l', 'o'};
         int n = 2;
 
@@ -25,7 +25,8 @@ public class UtilitiesTest {
         char[] actual = util.everyNthChar(input, n);
 
         //test
-        assertArrayEquals(output, actual);
+        assertArrayEquals(output, actual);*/
+        assertArrayEquals(new char[]{'e', 'l'}, util.everyNthChar(new char[] {'h', 'e', 'l', 'l', 'o'}, 2));
     }
 
     @org.junit.Test
