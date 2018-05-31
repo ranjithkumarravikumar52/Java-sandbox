@@ -27,6 +27,9 @@ public class UtilitiesTest {
         //test
         assertArrayEquals(output, actual);*/
         assertArrayEquals(new char[]{'e', 'l'}, util.everyNthChar(new char[] {'h', 'e', 'l', 'l', 'o'}, 2));
+
+        //when n > size of the input array
+        assertArrayEquals(new char[] {'h', 'e', 'l', 'l', 'o'}, util.everyNthChar(new char[] {'h', 'e', 'l', 'l', 'o'}, 10));
     }
 
     @org.junit.Test
