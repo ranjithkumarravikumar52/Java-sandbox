@@ -48,6 +48,13 @@ public class UtilitiesTest {
     }
 
     @org.junit.Test
+    public void removePairs_emptyStringInput(){
+        Utilities util = new Utilities();
+        assertEquals("",util.removePairs(""));
+    }
+
+
+    @org.junit.Test
     public void converter() {
         fail("Test yet to be implemented");
     }
