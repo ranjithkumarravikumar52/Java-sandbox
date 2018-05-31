@@ -53,6 +53,11 @@ public class UtilitiesTest {
         assertEquals("",util.removePairs(""));
     }
 
+    @org.junit.Test
+    public void removePairs_allCharsSameInputString(){
+        Utilities util = new Utilities();
+        assertEquals("A","AAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
 
     @org.junit.Test
     public void converter() {
