@@ -91,5 +91,6 @@ public class UtilitiesTest {
     @org.junit.Test
     public void nullIfOddLength() {
         assertNull(util.nullIfOddLength("abc"));
+        assertNotNull(util.nullIfOddLength("abcd"));
     }
 }
