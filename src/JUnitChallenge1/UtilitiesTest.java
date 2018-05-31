@@ -7,6 +7,13 @@ import static org.junit.Assert.fail;
 
 public class UtilitiesTest {
 
+    Utilities util;
+
+    @org.junit.Before
+    public void setup(){
+       util = new Utilities();
+    }
+
     @org.junit.Test
     public void everyNthChar() {
         fail("Test yet to be implemented");
@@ -14,9 +21,6 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_test1() {
-        //create Utilities object
-        Utilities util = new Utilities();
-
         //Input String: ABBCDEEF
         //Expected String: ABCDEF
         String inputString = "ABBCDEEF";
@@ -32,9 +36,6 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_test2() {
-        //create Utilities object
-        Utilities util = new Utilities();
-
         // "ABCBDEEF" -> "ABCBDEF" (the two B's aren't next to each other, so they
         // aren't removed)
         String inputString = "ABCBDEEF";
@@ -50,21 +51,23 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_emptyStringInput(){
-        Utilities util = new Utilities();
         assertEquals("",util.removePairs(""));
     }
 
     @org.junit.Test
     public void removePairs_allCharsSameInputString(){
-        Utilities util = new Utilities();
         assertEquals("A","AAAAAAAAAAAAAAAAAAAAAAAAA");
     }
 
     @org.junit.Test
     public void removePairs_nullInputString(){
-        Utilities util = new Utilities();
         //assertEquals(null, util.removePairs(null));
         assertNull("Remove pairs method doesn't handle null inputs", util.removePairs(null));
+    }
+
+    @org.junit.Test
+    public void removePairs_singleLengthInputString(){
+        
     }
 
     @org.junit.Test
