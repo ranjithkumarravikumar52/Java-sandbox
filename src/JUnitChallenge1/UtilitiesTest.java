@@ -2,6 +2,7 @@ package JUnitChallenge1;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 
 public class UtilitiesTest {
@@ -62,7 +63,8 @@ public class UtilitiesTest {
     @org.junit.Test
     public void removePairs_nullInputString(){
         Utilities util = new Utilities();
-        assertEquals(null, util.removePairs(null));
+        //assertEquals(null, util.removePairs(null));
+        assertNull("Remove pairs method doesn't handle null inputs", util.removePairs(null));
     }
 
     @org.junit.Test
