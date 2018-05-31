@@ -85,7 +85,7 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void converter() {
-        fail("Test yet to be implemented");
+        assertEquals(300, util.converter(10, 5));
     }
 
     @org.junit.Test
