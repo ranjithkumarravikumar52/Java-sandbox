@@ -13,33 +13,30 @@ import static org.junit.Assert.assertEquals;
 public class RemovePairsTestParameterized {
 
     //assertEquals("ABCDEF", util.removePairs("ABBCDEEF"));
+    //assertEquals(expected, util.removePairs(input));
     private String input;
     private String expected;
-    private Utilities util = new Utilities();
+    private Utilities util;
 
     public RemovePairsTestParameterized(String input, String expected) {
         this.input = input;
         this.expected = expected;
     }
 
-    //Parameterized.Parameters
-    /*
-    "ABCDEFF", "ABCDEF"
-    "AB88EFFG", "AB8EFG"
-    "112233445566", "123456"
-    "ZYZQQB", "ZYZQB"
-    "A", "A"
-     */
+    @org.junit.Before
+    public void setup(){
+        util = new Utilities();
+    }
 
     @Parameterized.Parameters
-    public static Collection<String> testCondition() {
-        return Arrays.asList(new String(){
+    public static Collection<Object[]> testCondition() {
+        return Arrays.asList(new Object[][] {
                                  {"ABCDEFF", "ABCDEF"},
                                  {"AB88EFFG", "AB8EFG"},
                                  {"112233445566", "123456"},
                                  {"ZYZQQB", "ZYZQB"},
                                  {"A", "A"}
-        };
+        });
 
 
     }
