@@ -26,10 +26,10 @@ public class UtilitiesTest {
 
         //test
         assertArrayEquals(output, actual);*/
-        assertArrayEquals(new char[]{'e', 'l'}, util.everyNthChar(new char[] {'h', 'e', 'l', 'l', 'o'}, 2));
+        assertArrayEquals(new char[]{'e', 'l'}, util.everyNthChar(new char[]{'h', 'e', 'l', 'l', 'o'}, 2));
 
         //when n > size of the input array
-        assertArrayEquals(new char[] {'h', 'e', 'l', 'l', 'o'}, util.everyNthChar(new char[] {'h', 'e', 'l', 'l', 'o'}, 10));
+        assertArrayEquals(new char[]{'h', 'e', 'l', 'l', 'o'}, util.everyNthChar(new char[]{'h', 'e', 'l', 'l', 'o'}, 10));
     }
 
     @org.junit.Test
@@ -86,8 +86,11 @@ public class UtilitiesTest {
     @org.junit.Test
     public void converter() {
         assertEquals(300, util.converter(10, 5));
-        assertEquals(new ArithmeticException(), util.converter(10, 0));
+    }
 
+    @org.junit.Test(expected = ArithmeticException.class)
+    public void convertor_byZero() throws Exception {
+        util.converter(10, 0);
     }
 
     @org.junit.Test
