@@ -68,6 +68,11 @@
 * Writing Tests for methods which throws exception
     * In the annotation include, `(excpeted = typeofexception.class)`
     * Or can also use try-catch block
+    
+#### Parameterized Tests
+* Motivation: How do we test five different values of deposits in our sample code? 
+* We can write five different test methods for each of these deposit values. However, this will make Test class really long and harder to maintain
+* Use `@RunWith(Parameterized.class)` to enable the class as parameterized
 
 
 
