@@ -60,6 +60,12 @@ public class UtilitiesTest {
     }
 
     @org.junit.Test
+    public void removePairs_nullInputString(){
+        Utilities util = new Utilities();
+        assertEquals(null, util.removePairs(null));
+    }
+
+    @org.junit.Test
     public void converter() {
         fail("Test yet to be implemented");
     }
