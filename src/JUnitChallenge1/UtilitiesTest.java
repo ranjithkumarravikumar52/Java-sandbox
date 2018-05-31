@@ -15,11 +15,6 @@ public class UtilitiesTest {
     }
 
     @org.junit.Test
-    public void everyNthChar() {
-        fail("Test yet to be implemented");
-    }
-
-    @org.junit.Test
     public void converter() {
         fail("Test yet to be implemented");
     }
