@@ -86,6 +86,8 @@ public class UtilitiesTest {
     @org.junit.Test
     public void converter() {
         assertEquals(300, util.converter(10, 5));
+        assertEquals(new ArithmeticException(), util.converter(10, 0));
+
     }
 
     @org.junit.Test
