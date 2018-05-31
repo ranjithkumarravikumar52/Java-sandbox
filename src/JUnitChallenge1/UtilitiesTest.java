@@ -14,18 +14,6 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void everyNthChar() {
-/*        //Input: h, e, l, l, o; n = 2
-        char[] input = {'h', 'e', 'l', 'l', 'o'};
-        int n = 2;
-
-        //expected: e, l
-        char[] output = {'e', 'l'};
-
-        //actual
-        char[] actual = util.everyNthChar(input, n);
-
-        //test
-        assertArrayEquals(output, actual);*/
         assertArrayEquals(new char[]{'e', 'l'}, util.everyNthChar(new char[]{'h', 'e', 'l', 'l', 'o'}, 2));
 
         //when n > size of the input array
@@ -34,32 +22,14 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_test1() {
-        //Input String: ABBCDEEF
-        //Expected String: ABCDEF
-        String inputString = "ABBCDEEF";
-        String expectedOutputString = "ABCDEF";
-
-        //call method removePairs()
-        String actualOutputString = util.removePairs(inputString);
-
-        //assert(expected, actual)
-        assertEquals(expectedOutputString, actualOutputString);
-
+        // ABBCDEEF -> ABCDEF
+        assertEquals("ABCDEF", util.removePairs("ABBCDEEF"));
     }
 
     @org.junit.Test
     public void removePairs_test2() {
-        // "ABCBDEEF" -> "ABCBDEF" (the two B's aren't next to each other, so they
-        // aren't removed)
-        String inputString = "ABCBDEEF";
-        String expectedOutputString = "ABCBDEF";
-
-        //call method removePairs()
-        String actualOutputString = util.removePairs(inputString);
-
-        //assert(expected, actual)
-        assertEquals(expectedOutputString, actualOutputString);
-
+        // "ABCBDEEF" -> "ABCBDEF"
+        assertEquals("ABCBDEF", util.removePairs("ABCBDEEF"));
     }
 
     @org.junit.Test
