@@ -20,6 +20,16 @@ public class UtilitiesTest {
     }
 
     @org.junit.Test
+    public void converter() {
+        fail("Test yet to be implemented");
+    }
+
+    @org.junit.Test
+    public void nullIfOddLength() {
+        fail("Test yet to be implemented");
+    }
+
+    @org.junit.Test
     public void removePairs_test1() {
         //Input String: ABBCDEEF
         //Expected String: ABCDEF
@@ -56,7 +66,7 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_allCharsSameInputString(){
-        assertEquals("A","AAAAAAAAAAAAAAAAAAAAAAAAA");
+        assertEquals("A",util.removePairs("AAAAAAAAAAAAAAAAAAAA"));
     }
 
     @org.junit.Test
@@ -67,16 +77,6 @@ public class UtilitiesTest {
 
     @org.junit.Test
     public void removePairs_singleLengthInputString(){
-        
-    }
-
-    @org.junit.Test
-    public void converter() {
-        fail("Test yet to be implemented");
-    }
-
-    @org.junit.Test
-    public void nullIfOddLength() {
-        fail("Test yet to be implemented");
+        assertEquals("A",util.removePairs("A"));
     }
 }
