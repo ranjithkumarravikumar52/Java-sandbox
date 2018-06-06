@@ -66,6 +66,7 @@
     * how to represent power of 10?
     * how to represent hex decimal power? 
         * p in 0x.....p1 represent hex decimal float point
+* Can't use true or false as keywords
         
 
 
