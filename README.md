@@ -8,6 +8,98 @@
 * Import other Java packages to make them accessible in your code
 * Compare and contrast the features and components of Java such as: platform independence, object orientation, encapsulation, etc.
 
+#### Notes on Java Basics Topic
+* Classes are Java basic building blocks
+* They have two main elements
+    * Fields/Variables - Hold the state of the class
+    * Methods - Operate on the state
+* What is a method signature? 
+* TIL- Writing java doc for every class and method and how it helps for documentation purposes
+* Directory structure - what is src folder, child packages (package1.package2), how to compact packages in IDE, import a package, import all packages
+* **Do we have to import System class for System.out.println()?**
+    * Answer: Don't need to import java.lang classes
+    * We can import it and it won't be an error but its just redundant
+* How to import classes with same name but from different packages? For example, Date class from java.util and java.sql?
+    * Answer: Use full class name for Both, don't import their packages
+* Can we import classes from default non-root packages?
+    * No.
+* Auto format in IntelliJ - `Ctrl + Alt + L`
+* Auto import `Ctrl + Alt + O`
+* What is a static import? 
+    * Example when we use `Math.min()`, is there a way around to just call it `min()`
+    * import static methods?
+    * import static variables?
+ ### Primitives
+| Keyword | Size | Examples |
+| :---         |     :---:      |          ---: |
+|  boolean  |   -   |     true|
+|   byte   |     8-bits   |   1    |
+|  short  |   16-bits   |   12  |
+|   int   |   32-bits     |  100     |
+| long   |   64-bits   |   12  |
+|   float   |   32-bits     |    123.45   |
+|  double  |   64-bits   |  123.4556789   |
+|   char   |   16-bits     |    'a'   |
+ 
+* What is a literal? 
+    * Syntactic representation of primitive
+* Default interpretation of literals?
+* 123,456,678 = 123_456_678
+* _2 valid?
+* 2_300 valid?
+* Octal presentation : 
+    * int n = 08; valid? 
+    * int n = 07; valid?
+* Hexadecimal representation? 
+    * (0-9 and A-F) -> 0-15
+    * 0x1E
+* binary representation?
+    * 0b1001 -> 9 in decimal
+    * 0b2 valid?
+* Decimal literal
+    * float f =  24.3 valid? 
+    * can't put underscore before/after decimal point
+    * not at the start or end of a literal either
+        * float myNumeber 24_.3; valid? 
+* Floating point decimals
+    * double d = 24.3F; valid?
+    * how to represent power of 10?
+    * how to represent hex decimal power? 
+        * p in 0x.....p1 represent hex decimal float point
+* Can't use true or false as keywords
+* Variables can begin with $ or _ sign
+    * But can't start with a number
+* Default initialization of variables
+    * Local variables don't have any default initialization and its a compiler if we try to access it
+    * Static variables in default or set to zero or false(boolean) or 0.0 (double and float)
+    * Static objects are initialized to null by default
+    * However for char it as default value of empty char
+* Variable scope/code blocks
+    * Two variables can have same name if they have different scopes
+* Ordering elements in a class
+    * Can we put import statement before the package statement?
+    * Can we have methods outside the class ?
+    * Can we have multiple classes inside a file? 
+        * Yes. But only public class and the rest has to be non-public 
+    * PIC - Package,Import,Class
+* Unboxing
+    * Integer -> int
+* Boxing (putting a primitive type in a wrapper)
+    * int -> Integer
+* Autoboxing 
+    * Converting primitive to wrapper or vice-versa automatically by the compiler
+
+
+#### Issues
+* [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
+        
+
+
+#### Day of the exam Tips
+* Use paper-pen to untangle complicated code or ugly code
+    * Check out for any missing braces before understanding the code
+    * No need to worry about different numeric system conversions
+
 ### Branch: TestingPractice
 #### Introduction to debugging
 * One special case about debugging is to understand third-party classes in your application when you don't have it's source code. Then debugging can help give us an higher understanding by examining the values we pass into those classes
