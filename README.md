@@ -67,6 +67,31 @@
     * how to represent hex decimal power? 
         * p in 0x.....p1 represent hex decimal float point
 * Can't use true or false as keywords
+* Variables can begin with $ or _ sign
+    * But can't start with a number
+* Default initialization of variables
+    * Local variables don't have any default initialization and its a compiler if we try to access it
+    * Static variables in default or set to zero or false(boolean) or 0.0 (double and float)
+    * Static objects are initialized to null by default
+    * However for char it as default value of empty char
+* Variable scope/code blocks
+    * Two variables can have same name if they have different scopes
+* Ordering elements in a class
+    * Can we put import statement before the package statement?
+    * Can we have methods outside the class ?
+    * Can we have multiple classes inside a file? 
+        * Yes. But only public class and the rest has to be non-public 
+    * PIC - Package,Import,Class
+* Unboxing
+    * Integer -> int
+* Boxing (putting a primitive type in a wrapper)
+    * int -> Integer
+* Autoboxing 
+    * Converting primitive to wrapper or vice-versa automatically by the compiler
+
+
+#### Issues
+* [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
         
 
 
