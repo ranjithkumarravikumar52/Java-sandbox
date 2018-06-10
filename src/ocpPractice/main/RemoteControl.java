@@ -37,7 +37,7 @@ public class RemoteControl {
         }
         if(theDevice.isConnectedToRemote() && theDevice != null){
             theDevice.setConnectedToRemote(false);
-            System.out.println("Connected to "+theDevice);
+            System.out.println("Disconnect from "+theDevice);
             return true;
         }
         System.out.println("Device status already connected: "+theDevice.isConnectedToRemote());

@@ -1,5 +1,6 @@
 package ocpPractice.main;
 
+import ocpPractice.test.RemoteControlTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +33,7 @@ public class RemoteControlParameterizedTest {
 
     @After
     public void disconnect(){
-        System.out.println("Inside disconnect");
+        System.out.println("\nInside disconnect");
         if(theDevice.isTurnedOn()){
             RemoteControl.turnOffDevice(theDevice);
         }
@@ -57,6 +58,7 @@ public class RemoteControlParameterizedTest {
         return Arrays.asList(returnList);
     }
 
+    //TODO how to link all test cases in one single method. Try to apply OCP
     @Test
     public void connectToDevice_for_the_first_time() {
         assertEquals(true, RemoteControl.connectToDevice(theDevice));
