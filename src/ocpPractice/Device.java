@@ -27,4 +27,21 @@ public class Device {
         this.isTurnedOn = false;
         this.isConnectedToRemote = false;
     }
+
+    //====== SETTERS AND GETTERS ======
+    public boolean isTurnedOn() {
+        return isTurnedOn;
+    }
+
+    public void setTurnedOn(boolean turnedOn) {
+        isTurnedOn = turnedOn;
+    }
+
+    public boolean isConnectedToRemote() {
+        return isConnectedToRemote;
+    }
+
+    public void setConnectedToRemote(boolean connectedToRemote) {
+        isConnectedToRemote = connectedToRemote;
+    }
 }
