@@ -17,9 +17,27 @@ public class RemoteControl {
      * Where ?
      */
     public static boolean connectToDevice(Device theDevice){
-        if(!theDevice.isConnectedToRemote()){
+        if(theDevice == null){
+            System.out.println("No Device object present");
+            return false;
+        }
+        if(!theDevice.isConnectedToRemote() && theDevice != null){
             theDevice.setConnectedToRemote(true);
-            System.out.println("Connected to device "+theDevice);
+            System.out.println("Connected to "+theDevice);
+            return true;
+        }
+        System.out.println("Device status already connected: "+theDevice.isConnectedToRemote());
+        return false;
+    }
+
+    public static boolean disconnectTheDevice(Device theDevice){
+        if(theDevice == null){
+            System.out.println("No Device object present");
+            return false;
+        }
+        if(theDevice.isConnectedToRemote() && theDevice != null){
+            theDevice.setConnectedToRemote(false);
+            System.out.println("Connected to "+theDevice);
             return true;
         }
         System.out.println("Device status already connected: "+theDevice.isConnectedToRemote());
@@ -52,7 +70,7 @@ public class RemoteControl {
         if(theDevice.isConnectedToRemote()){
             if (theDevice.isTurnedOn()){
                 theDevice.setTurnedOn(false);
-                System.out.println("Turned off the device: "+theDevice);
+                System.out.println("Turned off the device...: "+theDevice);
                 return true;
             }
             System.out.println("Device is already off");

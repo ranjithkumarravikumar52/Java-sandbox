@@ -1,19 +1,60 @@
-package ocpPractice.test;
+package ocpPractice.main;
 
-import ocpPractice.main.*;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.assertEquals;
+import java.util.Arrays;
+import java.util.Collection;
 
-public class RemoteControlTest {
+import static org.junit.Assert.*;
+
+@RunWith(Parameterized.class)
+public class RemoteControlParameterizedTest {
 
     private Device theDevice;
 
+    public RemoteControlParameterizedTest(Device theDevice) {
+        this.theDevice = theDevice;
+    }
+
+    public Device getTheDevice() {
+        return theDevice;
+    }
+
     @Before
     public void setup() {
-//        theDevice = new TV("apple TV");
-        theDevice = new Projector("Apple Projector");
+        System.out.println("\nInside setup");
+        theDevice = this.getTheDevice();
+    }
+
+    @After
+    public void disconnect(){
+        System.out.println("Inside disconnect");
+        if(theDevice.isTurnedOn()){
+            RemoteControl.turnOffDevice(theDevice);
+        }
+        if(theDevice.isConnectedToRemote()){
+            RemoteControl.disconnectTheDevice(theDevice);
+        }
+    }
+
+    /**
+     * This method is called only once.
+     * Create all your objects in here to execute the test suite
+     * @return
+     */
+    @Parameterized.Parameters
+    public static Collection<Object> testCondition(){
+        System.out.println("Inside parameters\n");
+        Object[] returnList = {
+                new TV("Apple TV"),
+                new SoundSystem("Apple Sound System"),
+                new Projector("LG Projector")
+        };
+        return Arrays.asList(returnList);
     }
 
     @Test
@@ -66,4 +107,5 @@ public class RemoteControlTest {
         RemoteControl.connectToDevice(theDevice);
         assertEquals(false, RemoteControl.turnOffDevice(theDevice));
     }
+
 }
