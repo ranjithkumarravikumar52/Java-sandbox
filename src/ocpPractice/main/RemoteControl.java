@@ -1,4 +1,4 @@
-package ocpPractice;
+package ocpPractice.main;
 
 /**
  * This class should handle responsibilities about the RemoteControl class only.
@@ -18,6 +18,7 @@ public class RemoteControl {
     public static void connectToDevice(Device theDevice){
         if(!theDevice.isConnectedToRemote()){
             theDevice.setConnectedToRemote(true);
+            System.out.println("Connected to device "+theDevice);
         }
     }
 
@@ -29,6 +30,7 @@ public class RemoteControl {
         if(theDevice.isConnectedToRemote()){
             if (!theDevice.isTurnedOn()){
                 theDevice.setTurnedOn(true);
+                System.out.println("Turned on the device: "+theDevice);
             }
         }
     }
@@ -41,6 +43,7 @@ public class RemoteControl {
         if(theDevice.isConnectedToRemote()){
             if (theDevice.isTurnedOn()){
                 theDevice.setTurnedOn(false);
+                System.out.println("Turned off the device "+theDevice);
             }
         }
     }

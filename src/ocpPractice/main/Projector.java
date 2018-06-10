@@ -1,4 +1,4 @@
-package ocpPractice;
+package ocpPractice.main;
 
 public class Projector extends Device {
     /**
