@@ -22,7 +22,7 @@ public class Device {
      * This implies that deviceName is the only argument client is forced to send in the main. The other parameters are set to false by default
      * @param deviceName Name of the device
      */
-    public Device(String deviceName) {
+    private Device(String deviceName) {
         this.deviceName = deviceName;
         this.isTurnedOn = false;
         this.isConnectedToRemote = false;
@@ -49,4 +49,7 @@ public class Device {
     public String toString() {
         return "{deviceName='" + deviceName + "'}";
     }
+
+    //TODO implements turnOn and turnOff for each Device type
+    //Could be done with abstract class or an interface
 }
