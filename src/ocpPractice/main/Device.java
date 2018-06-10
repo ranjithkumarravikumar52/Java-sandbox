@@ -47,8 +47,6 @@ public class Device {
 
     @Override
     public String toString() {
-        return "Device{" +
-                "deviceName='" + deviceName + '\'' +
-                '}';
+        return "deviceName='" + deviceName + "'";
     }
 }
