@@ -1,6 +1,8 @@
 package ocpPractice.test;
 
-import ocpPractice.main.*;
+import ocpPractice.main.controller.RemoteControl;
+import ocpPractice.main.devices.Device;
+import ocpPractice.main.devices.Projector;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package ocpPractice.main;
+package ocpPractice.main.User;
 
 public class Person {
 

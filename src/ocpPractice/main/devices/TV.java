@@ -1,6 +1,7 @@
-package ocpPractice.main;
+package ocpPractice.main.devices;
 
-public class SoundSystem extends Device {
+public class TV extends Device {
+
     /**
      * Any device that is brought into this world should be forced to instantiated by the following.
      * This of this constructor as a new device just got into the house and connected to power supply and just ready to use.
@@ -8,7 +9,7 @@ public class SoundSystem extends Device {
      *
      * @param deviceName Name of the device
      */
-    public SoundSystem(String deviceName) {
+    public TV(String deviceName) {
         super(deviceName);
     }
 }

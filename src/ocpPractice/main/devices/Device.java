@@ -1,4 +1,4 @@
-package ocpPractice.main;
+package ocpPractice.main.devices;
 
 /**
  * This class is super-class or parent of all the Devices. Helps with the OCP design principle

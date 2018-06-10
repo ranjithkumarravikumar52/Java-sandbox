@@ -1,4 +1,6 @@
-package ocpPractice.main;
+package ocpPractice.main.controller;
+
+import ocpPractice.main.devices.Device;
 
 /**
  * This class should handle responsibilities about the RemoteControl class only.
