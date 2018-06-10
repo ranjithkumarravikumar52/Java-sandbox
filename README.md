@@ -95,6 +95,7 @@
 
 #### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
+* [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
 
 
 
@@ -163,11 +164,13 @@
 * Using filters to examine all your tests
 * When testing a value against true or false, use assertTrue or assertFalse
 * `@Before`
-    * runs before every tests
+    * runs before every test method
+* `@After`
+  * runs after every test method
 * `@BeforeClass`
-    * runs only once before any tests
+    * runs only once before any test method
 * `@AfterClass`
-    * runs only once after every tests
+    * runs only once after every test method
 * Writing Tests for methods which throws exception
     * In the annotation include, `(excpeted = typeofexception.class)`
     * Or can also use try-catch block
@@ -178,11 +181,8 @@
 
 ##### Steps
 * Use `@RunWith(Parameterized.class)` to enable the class as parameterized
-* write the constructor for the class, as newly created objects can be instantiated through this constructor from multiple parameterized method
-* Write `@Parameterized.Parameters` to enable to static parameters to be passed into a test case
-
-
-
+* Write the constructor for the class, as newly created objects can be instantiated through this constructor from multiple parameterized method
+* Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
 
 ### Thanks and Credits
