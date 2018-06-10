@@ -1,8 +1,8 @@
 # Java Sandbox
 
 ### Oracle certified associate - Topics
-#### Java Basics 
-* Define the scope of variables 
+#### Java Basics
+* Define the scope of variables
 * Define the structure of a Java class
 * Create executable Java applications with a main method; run a Java program from the command line; produce console output
 * Import other Java packages to make them accessible in your code
@@ -13,7 +13,7 @@
 * They have two main elements
     * Fields/Variables - Hold the state of the class
     * Methods - Operate on the state
-* What is a method signature? 
+* What is a method signature?
 * TIL- Writing java doc for every class and method and how it helps for documentation purposes
 * Directory structure - what is src folder, child packages (package1.package2), how to compact packages in IDE, import a package, import all packages
 * **Do we have to import System class for System.out.println()?**
@@ -25,11 +25,13 @@
     * No.
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O`
-* What is a static import? 
+* What is a static import?
     * Example when we use `Math.min()`, is there a way around to just call it `min()`
     * import static methods?
     * import static variables?
- ### Primitives
+
+### Primitives
+
 | Keyword | Size | Examples |
 | :---         |     :---:      |          ---: |
 |  boolean  |   -   |     true|
@@ -40,31 +42,32 @@
 |   float   |   32-bits     |    123.45   |
 |  double  |   64-bits   |  123.4556789   |
 |   char   |   16-bits     |    'a'   |
- 
-* What is a literal? 
+
+
+* What is a literal?
     * Syntactic representation of primitive
 * Default interpretation of literals?
 * 123,456,678 = 123_456_678
-* _2 valid?
+* is _2 valid?
 * 2_300 valid?
-* Octal presentation : 
-    * int n = 08; valid? 
+* Octal presentation :
+    * int n = 08; valid?
     * int n = 07; valid?
-* Hexadecimal representation? 
+* Hexadecimal representation?
     * (0-9 and A-F) -> 0-15
     * 0x1E
 * binary representation?
     * 0b1001 -> 9 in decimal
     * 0b2 valid?
 * Decimal literal
-    * float f =  24.3 valid? 
+    * float f =  24.3 valid?
     * can't put underscore before/after decimal point
     * not at the start or end of a literal either
-        * float myNumeber 24_.3; valid? 
+        * float myNumeber 24_.3; valid?
 * Floating point decimals
     * double d = 24.3F; valid?
     * how to represent power of 10?
-    * how to represent hex decimal power? 
+    * how to represent hex decimal power?
         * p in 0x.....p1 represent hex decimal float point
 * Can't use true or false as keywords
 * Variables can begin with $ or _ sign
@@ -79,20 +82,21 @@
 * Ordering elements in a class
     * Can we put import statement before the package statement?
     * Can we have methods outside the class ?
-    * Can we have multiple classes inside a file? 
-        * Yes. But only public class and the rest has to be non-public 
+    * Can we have multiple classes inside a file?
+        * Yes. But only public class and the rest has to be non-public
     * PIC - Package,Import,Class
 * Unboxing
     * Integer -> int
 * Boxing (putting a primitive type in a wrapper)
     * int -> Integer
-* Autoboxing 
+* Autoboxing
     * Converting primitive to wrapper or vice-versa automatically by the compiler
 
 
 #### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
-        
+* [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
+
 
 
 #### Day of the exam Tips
@@ -159,23 +163,26 @@
 * So, only one assert per test method/condition
 * Using filters to examine all your tests
 * When testing a value against true or false, use assertTrue or assertFalse
-* `@Before` 
-    * runs before every tests
+* `@Before`
+    * runs before every test method
+* `@After`
+  * runs after every test method
 * `@BeforeClass`
-    * runs only once before any tests 
+    * runs only once before any test method
 * `@AfterClass`
-    * runs only once after every tests
+    * runs only once after every test method
 * Writing Tests for methods which throws exception
     * In the annotation include, `(excpeted = typeofexception.class)`
     * Or can also use try-catch block
-    
+
 #### Parameterized Tests
-* Motivation: How do we test five different values of deposits in our sample code? 
+* Motivation: How do we test five different values of deposits in our sample code?
 * We can write five different test methods for each of these deposit values. However, this will make Test class really long and harder to maintain
+
+##### Steps
 * Use `@RunWith(Parameterized.class)` to enable the class as parameterized
-
-
-
+* Write the constructor for the class, as newly created objects can be instantiated through this constructor from multiple parameterized method
+* Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
 
 ### Thanks and Credits

@@ -30,13 +30,14 @@ public class BankTestParameterized {
 
     @Parameterized.Parameters
     public static Collection<Object[]> testCondition(){
-        return Arrays.asList(new Object[][]{
+        Object[][] returnList = {
                 {100.00, true, 1100.00},
                 {200.00, true, 1200.00},
                 {204.00, true, 1204.00},
                 {2003.00, true, 3003.00},
                 {530.00, true, 1530.00}
-        });
+        };
+        return Arrays.asList(returnList);
     }
 
     @org.junit.Test
