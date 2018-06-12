@@ -1,6 +1,7 @@
 # Java Sandbox
 
 ### Oracle certified associate - Topics
+### Branch java-basics
 #### Java Basics
 * Define the scope of variables
 * Define the structure of a Java class
@@ -30,7 +31,7 @@
     * import static methods?
     * import static variables?
 
-### Primitives
+#### Primitives
 
 | Keyword | Size | Examples |
 | :---         |     :---:      |          ---: |
@@ -92,17 +93,22 @@
 * Autoboxing
     * Converting primitive to wrapper or vice-versa automatically by the compiler
 
+***
+
+#### Day of the exam Tips
+* Use paper-pen to untangle complicated code or ugly code
+    * Check out for any missing braces before understanding the code
+    * No need to worry about different numeric system conversions
+
+***
 
 #### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
 * [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
 
 
+***
 
-#### Day of the exam Tips
-* Use paper-pen to untangle complicated code or ugly code
-    * Check out for any missing braces before understanding the code
-    * No need to worry about different numeric system conversions
 
 ### Branch: TestingPractice
 #### Introduction to debugging
