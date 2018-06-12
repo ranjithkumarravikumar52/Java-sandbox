@@ -33,6 +33,21 @@
     * `int m = f / 2 - 10 % (4 + 3) - 2 * f % g - h * 3`
     * -7
 ***
+* Promotion - When two values have different data types, Java will promote one of the values to the larger data type
+* In other words, converting "smaller" type to "bigger" type
+    * `int x = 5`, `double y = 10.55`, `double result = x + y`;
+        * 15.55 or 15 ? 
+        * 15.55
+* Casting - opposite of promotion
+* Converting "bigger" type to "smaller" type
+    * `int x = 5`, `double y = 10.55`, `int result = (int) (x + y)`;
+        * 15 or 15.55
+        * 15
+* Be mindful of assigning expression which is smaller and bigger data type to a smaller data type as this will lead to a compilation error unless "cast" is done
+* Overflow of data types
+* Underflow of data types
+***
+
     
 
 
