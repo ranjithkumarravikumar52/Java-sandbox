@@ -47,10 +47,9 @@
 * Overflow of data types
 * Underflow of data types
 ***
-
-    
-
-
+* Unary operators 
+* Wrapper class pool values
+* equalto vs ==
 - - -
 ### Branch java-basics
 #### Exam topic
