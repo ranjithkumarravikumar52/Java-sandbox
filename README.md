@@ -16,7 +16,7 @@ Test equality between Strings and other objects using == and equals ()
 Create if and if/else and ternary constructs 
 Use a switch statement 
 
-#### Notes
+#### Notes on OCJA operations
 * [Types of operators - I](https://www.javatpoint.com/operators-in-java)
 * [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
 ***
@@ -60,7 +60,28 @@ Use a switch statement
 ***
 * Unary operators 
 * Wrapper class pool values
+    * Integer i1 = 10; 
+    * Integer i2 = 10; 
+    * i1==i2, i1.equalsTo(i2)
 * equalto vs ==
+- - -
+#### Notes on OCJA-control-flow
+* basic if-else work flow
+* complex if-else work flows
+* Ternary operators
+    * Use different datatypes in the ternary operator
+    * Need to have same datatypes on both sides
+    * Short circuit ternary operator evaluation
+    * Ternary operator with unary operator
+        * f = 3; f = f++; 
+            * f = 3 or 4 ?
+            * 3
+* switch case
+    * supported data types
+        * int, short, char, byte and their wrappers (for the exam)
+    * what's the minimum number of cases/branches that is allowed in Java?
+    * pitfalls of switch case
+    * case variables should always be constants
 - - -
 ### Branch java-basics
 #### Exam topic
