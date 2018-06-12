@@ -1,7 +1,58 @@
 # Java Sandbox
 
 ### Oracle certified associate - Topics
-#### Java Basics
+
+### Branch OCJA-operations
+#### Exam topic
+
+#### Notes
+* [Types of operators - I](https://www.javatpoint.com/operators-in-java)
+* [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
+***
+* Operators can be applied to one, two or three operands
+* Java follows operator precedence when two operators have same precedence
+    * It evaluates from left to right
+***
+* `int a  = 3 - 2 + 2 * 2 + 3`
+    * a = 8;
+* `int a  = 4 / 2 + 1 - 4 * 2 + 10`
+    * a = 5;
+* `int a  = 4 `, `int b = 3 - 2 * --a`
+    * a = 3, b = -3
+* `int a  = 4 `, `int b = 3 - 2 * a--`
+    * a = 3, b = -5
+* `long c = 2`, `long d = 4 + 3 * c++`
+    * c = 3, d = 10
+* `result = 10 - 3 * (2 + 1) - 4 / (1 + 3)`
+    * 0
+* `int i = 10 % 2`
+    * 0
+* `int j = 10 % 3`
+    * 1
+* `int f = 12`, `int g = 5`, `int h = 2`
+    * `int m = f / 2 - 10 % (4 + 3) - 2 * f % g - h * 3`
+    * -7
+***
+* Promotion - When two values have different data types, Java will promote one of the values to the larger data type
+* In other words, converting "smaller" type to "bigger" type
+    * `int x = 5`, `double y = 10.55`, `double result = x + y`;
+        * 15.55 or 15 ? 
+        * 15.55
+* Casting - opposite of promotion
+* Converting "bigger" type to "smaller" type
+    * `int x = 5`, `double y = 10.55`, `int result = (int) (x + y)`;
+        * 15 or 15.55
+        * 15
+* Be mindful of assigning expression which is smaller and bigger data type to a smaller data type as this will lead to a compilation error unless "cast" is done
+* Overflow of data types
+* Underflow of data types
+***
+* Unary operators 
+* Wrapper class pool values
+* equalto vs ==
+- - -
+### Branch java-basics
+#### Exam topic
 * Define the scope of variables
 * Define the structure of a Java class
 * Create executable Java applications with a main method; run a Java program from the command line; produce console output
@@ -30,7 +81,7 @@
     * import static methods?
     * import static variables?
 
-### Primitives
+#### Primitives
 
 | Keyword | Size | Examples |
 | :---         |     :---:      |          ---: |
@@ -92,17 +143,22 @@
 * Autoboxing
     * Converting primitive to wrapper or vice-versa automatically by the compiler
 
+***
+
+#### Day of the exam Tips
+* Use paper-pen to untangle complicated code or ugly code
+    * Check out for any missing braces before understanding the code
+    * No need to worry about different numeric system conversions
+
+***
 
 #### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
 * [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
 
 
+***
 
-#### Day of the exam Tips
-* Use paper-pen to untangle complicated code or ugly code
-    * Check out for any missing braces before understanding the code
-    * No need to worry about different numeric system conversions
 
 ### Branch: TestingPractice
 #### Introduction to debugging
