@@ -55,6 +55,7 @@ public class RemoteControl {
             if (!theDevice.isTurnedOn()){
                 theDevice.setTurnedOn(true);
                 System.out.println("Turned on the device: "+theDevice);
+                theDevice.turnOn();
                 return true;
             }
             System.out.println("Device is already turned on "+theDevice.isTurnedOn());
@@ -73,6 +74,7 @@ public class RemoteControl {
             if (theDevice.isTurnedOn()){
                 theDevice.setTurnedOn(false);
                 System.out.println("Turned off the device...: "+theDevice);
+                theDevice.turnOff();
                 return true;
             }
             System.out.println("Device is already off");

@@ -9,7 +9,7 @@ package ocpPractice.main.devices;
  *     <li>Future devices</li>
  * </ul>
  */
-public class Device {
+abstract public class Device {
     //properties - keep in mind that these variables will be inherited by child class
     private String deviceName;
     private boolean isTurnedOn;
@@ -22,7 +22,7 @@ public class Device {
      * This implies that deviceName is the only argument client is forced to send in the main. The other parameters are set to false by default
      * @param deviceName Name of the device
      */
-    private Device(String deviceName) {
+    protected Device(String deviceName) {
         this.deviceName = deviceName;
         this.isTurnedOn = false;
         this.isConnectedToRemote = false;
@@ -52,4 +52,6 @@ public class Device {
 
     //TODO implements turnOn and turnOff for each Device type
     //Could be done with abstract class or an interface
+    public abstract void turnOn();
+    public abstract void turnOff();
 }
