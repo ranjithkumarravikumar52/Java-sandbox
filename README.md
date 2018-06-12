@@ -1,8 +1,44 @@
 # Java Sandbox
 
 ### Oracle certified associate - Topics
+
+### Branch OCJA-operations
+#### Exam topic
+
+#### Notes
+* [Types of operators - I](https://www.javatpoint.com/operators-in-java)
+* [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
+***
+* Operators can be applied to one, two or three operands
+* Java follows operator precedence when two operators have same precedence
+    * It evaluates from left to right
+***
+* `int a  = 3 - 2 + 2 * 2 + 3`
+    * a = 8;
+* `int a  = 4 / 2 + 1 - 4 * 2 + 10`
+    * a = 5;
+* `int a  = 4 `, `int b = 3 - 2 * --a`
+    * a = 3, b = -3
+* `int a  = 4 `, `int b = 3 - 2 * a--`
+    * a = 3, b = -5
+* `long c = 2`, `long d = 4 + 3 * c++`
+    * c = 3, d = 10
+* `result = 10 - 3 * (2 + 1) - 4 / (1 + 3)`
+    * 0
+* `int i = 10 % 2`
+    * 0
+* `int j = 10 % 3`
+    * 1
+* `int f = 12`, `int g = 5`, `int h = 2`
+    * `int m = f / 2 - 10 % (4 + 3) - 2 * f % g - h * 3`
+    * -7
+***
+    
+
+
+- - -
 ### Branch java-basics
-#### Java Basics
+#### Exam topic
 * Define the scope of variables
 * Define the structure of a Java class
 * Create executable Java applications with a main method; run a Java program from the command line; produce console output
