@@ -1,9 +1,20 @@
 # Java Sandbox
 
-### Oracle certified associate - Topics
+### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
 
-### Branch OCJA-operations
+### Branch OCJA-operations and OCJA-control-flow
 #### Exam topic
+Working With Java Data Types 
+Declare and initialize variables (including casting of primitive data types)
+Differentiate between object reference variables and primitive variables
+Know how to read or write to object fields
+Explain an Object's Lifecycle (creation, "dereference by reassignment" and garbage collection)
+Develop code that uses wrapper classes such as Boolean, Double, and Integer  
+Using Operators and Decision Constructs 
+Use Java operators; use parentheses to override operator precedence
+Test equality between Strings and other objects using == and equals ()
+Create if and if/else and ternary constructs 
+Use a switch statement 
 
 #### Notes
 * [Types of operators - I](https://www.javatpoint.com/operators-in-java)
