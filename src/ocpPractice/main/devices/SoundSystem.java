@@ -11,4 +11,14 @@ public class SoundSystem extends Device {
     public SoundSystem(String deviceName) {
         super(deviceName);
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Sound system is on...");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Sound system is off...");
+    }
 }

@@ -11,4 +11,14 @@ public class Projector extends Device {
     public Projector(String deviceName) {
         super(deviceName);
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Projector screen is down...");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Projector screen is up....");
+    }
 }
