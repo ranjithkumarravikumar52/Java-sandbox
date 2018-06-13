@@ -82,6 +82,11 @@ Use a switch statement
     * what's the minimum number of cases/branches that is allowed in Java?
     * pitfalls of switch case
     * case variables should always be constants
+* while loop/do-while/for loop
+    * infinite loop
+    * never-executing loop
+    * scope of loop variables
+    * does the body of the loop executes at least once?
 - - -
 ### Branch java-basics
 #### Exam topic
