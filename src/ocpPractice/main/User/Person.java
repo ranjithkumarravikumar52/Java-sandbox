@@ -18,6 +18,7 @@ public class Person {
         RemoteControl.turnOnDevice(theDevice);
         RemoteControl.turnOffDevice(theDevice);
 
+
         //TODO Connect -> Turn on -> Turn off
     }
 }
