@@ -2,6 +2,69 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
 
+### Branch OCJA-strings
+#### Notes
+* String is a special that can be created just by using string literal
+    * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
+***
+* Be careful about "+" operator present in between operands type
+    * if both operands are int/numeric addition takes place
+    * if one of them is string then concatenation
+        * NOTE: the order in which the string type detected matters!
+* Immutable strings
+    * not changeable strings
+    * once the object is created it cannot be changed
+    * almost every method that is called upon a string variable will return a new string while keeping the "called" string variable intact, unless it is de-referenced and assigned it itself
+* String concatenation 
+    * Can be done using "+" operator
+    * Can be done using concat() 
+* To "check" the memory address of any object/variable use
+    * `System.identityHashCode(variable)`
+* String pool
+    * combination of string literal and string variable
+    * check if the memory locations are same
+    * `str1 = "abc"`, `str2 = "ab"`, `str3 = str2 + "c"`, `str4 = "ab" + "c"`
+        * is `str1 == str3`
+        * is `str1 == str4`
+***
+* String methods (13) - sequence of char, immutable strings
+    * str.length()
+    * str.charAt(i)
+    * str.indexOf('char')
+    * str.indexOf('char', fromIndex: 2)
+    * str.substring(start)
+    * str.substring(start, end) //test the range of start, end
+    * str.toUpperCase
+    * str.toLowerCase
+    ***
+    * str.equals()
+    * str.equalsIgnoreCase()
+    ***
+    * str.startsWith()
+    * str.endsWith()
+    ***
+    * str.contains()
+    ***
+    * str.replace(oldChar, newChar)
+    * str.replace(stringVariable, stringVariable)
+    * str.replace(literal, literal)
+    ***
+    * str.trim() - removes starting and ending empty spaces
+***
+* chaining methods
+    * Can be done only on methods that returns some object
+***
+* String builder
+    * Not immutable 
+    * Helps avoid create multiple objects when used only with String methods 
+    * sb.append()
+    * **Careful about trick question on string builder immutability**   
+
+    
+    
+    
+    
+
 ### Branch OCJA-operations and OCJA-control-flow
 #### Exam topic
 Working With Java Data Types 
