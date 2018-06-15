@@ -2,6 +2,13 @@ package ocjapractice;
 
 public class App {
     public static void main(String[] args) {
+//        ocjaStrings();
+
+
+
+    }
+
+    private static void ocjaStrings() {
         /*str.length()
         str.charAt(i)
         str.indexOf('char')
@@ -26,7 +33,7 @@ public class App {
         System.out.println(hello.length());
 
         //charAt
-        System.out.println(hello.charAt(hello.length()/3));
+        System.out.println(hello.charAt(hello.length() / 3));
 
         //substring
         System.out.println(hello.substring(10));
@@ -34,8 +41,8 @@ public class App {
         System.out.println(hello.substring(10, 10));
 
         //lower and upper cases
-        System.out.println("Lower case: "+ hello.toLowerCase());
-        System.out.println("Upper case: "+ hello.toUpperCase());
+        System.out.println("Lower case: " + hello.toLowerCase());
+        System.out.println("Upper case: " + hello.toUpperCase());
         System.out.println();
 
         //equals - expected to have tricky questions here
@@ -62,8 +69,5 @@ public class App {
         String var2 = "WAHAT";
 
         System.out.println(hello.replace(var1, var2));
-
-
-
     }
 }
