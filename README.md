@@ -4,7 +4,7 @@
 
 ### Branch OCJA-strings
 #### Notes
-* String is a special that can be created just by using string literal
+* String is a special object that can be created just by using string literal
     * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
 ***
 * Be careful about "+" operator present in between operands type
@@ -59,25 +59,7 @@
     * Helps avoid create multiple objects when used only with String methods 
     * sb.append()
     * **Careful about trick question on string builder immutability**   
-
-    
-    
-    
-    
-
-### Branch OCJA-operations and OCJA-control-flow
-#### Exam topic
-Working With Java Data Types 
-Declare and initialize variables (including casting of primitive data types)
-Differentiate between object reference variables and primitive variables
-Know how to read or write to object fields
-Explain an Object's Lifecycle (creation, "dereference by reassignment" and garbage collection)
-Develop code that uses wrapper classes such as Boolean, Double, and Integer  
-Using Operators and Decision Constructs 
-Use Java operators; use parentheses to override operator precedence
-Test equality between Strings and other objects using == and equals ()
-Create if and if/else and ternary constructs 
-Use a switch statement 
+***
 
 #### Notes on OCJA operations
 * [Types of operators - I](https://www.javatpoint.com/operators-in-java)
@@ -151,14 +133,6 @@ Use a switch statement
     * scope of loop variables
     * does the body of the loop executes at least once?
 - - -
-### Branch java-basics
-#### Exam topic
-* Define the scope of variables
-* Define the structure of a Java class
-* Create executable Java applications with a main method; run a Java program from the command line; produce console output
-* Import other Java packages to make them accessible in your code
-* Compare and contrast the features and components of Java such as: platform independence, object orientation, encapsulation, etc.
-
 #### Notes on Java Basics Topic
 * Classes are Java basic building blocks
 * They have two main elements
