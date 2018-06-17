@@ -2,6 +2,21 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
 
+### OCJA-class design
+* why is private constructor used? 
+    * Singleton Pattern - check [this](https://stackoverflow.com/questions/17342815/what-is-the-use-of-private-constructor-in-java)
+* this()
+    * to optimize overloaded constructors by removing duplicate code
+    * should be the first line of code in any constructor. 
+    * never ending constructor chaining is a compiler error not a run-time exception
+***
+* Order of initialization
+    * super()
+    * static (in the order they appear)
+    * instance (in the order they appear)
+    * constructor
+***
+* 
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
 * Order of the access modifier and optional ones can be interchanged
@@ -39,6 +54,8 @@
 * _.toArray()
 * Difference b/w
     * for, for-each, iterator, ListIterator
+    * concurrent modification exception
+***
 * Two arrayLists are equal if they have same elements and same order, whereas two arrays are equal if they have same elements even if they don't have same order - DOUBT
     * 
     ` int[] myArray = new int[]{1,2};
