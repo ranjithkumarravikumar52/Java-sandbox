@@ -6,14 +6,46 @@ import java.util.List;
 
 public class App {
 
-    public static final String STRING;
-
-    static {
-        STRING = "ranjith";
-    }
-
     public static void main(String[] args) {
 
+        //nested for-loop
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+                //some other code goes here
+            }
+
+        System.out.println();
+
+        //nested for-loop
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+                //some other code goes here
+            }
+        }
+
+    }
+
+    private static void initMutliDimenArray() {
+        //create and initialize a 1-d array
+        int[] oneD = new int[]{
+                1, 2, 3, 4
+        };
+
+        //create and initialize a 2-d array
+        int[][] twoD = new int[][]{
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        //create and initialize a 3-d array
+        //3d    -> an array of 2-d arrays
+        //      -> an array of (an array of 1-d arrays)
+        int[][][] threeD = new int[][][]{
+                {{1, 2, 3}, {4, 5, 6}},
+                {{7, 8, 9}}, {{10, 11, 12}}
+        };
     }
 
     private static int count(boolean b, boolean... booleans) {

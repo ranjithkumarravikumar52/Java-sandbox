@@ -2,6 +2,28 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
 
+### OCJA-Arrays
+* Confused on how to create and initialize multi-dimensional arrays? 
+`
+        //create and initialize a 1-d array
+        int[] oneD = new int[]{
+                1,2,3,4
+        };
+
+        //create and initialize a 2-d array
+        int[][] twoD = new int[][]{
+                {1,2,3},
+                {4,5,6}
+        };
+
+        //create and initialize a 3-d array
+        //3d    -> an array of 2-d arrays
+        //      -> an array of (an array of 1-d arrays)
+        int[][][] threeD = new int[][][]{
+                {{1,2,3}, {4,5,6}},
+                {{7,8,9}}, {{10,11,12}}
+        };`
+
 ### OCJA-strings
 * String is a special object that can be created just by using string literal
     * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
@@ -130,7 +152,26 @@
     * infinite loop
     * never-executing loop
     * scope of loop variables
-    * does the body of the loop executes at least once?
+    * does the body of the loop executes at least once? 
+    
+* for a nested for-loop, curly braces for the outer loop is not needed
+`   //nested for-loop
+            for (int i = 0; i < 2; i++)
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+    
+            System.out.println();
+    
+            //nested for-loop
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+            }
+`
 - - -
 ### OCJA-Basics
 * Classes are Java basic building blocks
