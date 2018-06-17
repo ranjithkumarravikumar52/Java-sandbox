@@ -6,6 +6,11 @@ public class App {
 
     public static void main(String[] args) {
 
+
+
+    }
+
+    private static void equalityofArraysAndArrayLists() {
         int[] myArray = new int[]{1,2};
         int[] myAnotherArray = new int[]{1,2};
 
@@ -21,7 +26,6 @@ public class App {
         myAnotherArrayList.add(2);
 
         System.out.println(myArrayList.equals(myAnotherArrayList));
-
     }
 
     private static void nestedForLoop() {

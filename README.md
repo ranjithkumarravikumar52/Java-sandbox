@@ -1,6 +1,29 @@
 # Java Sandbox
 
-### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
+### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
+
+### OCJA-methods
+* `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
+* Order of the access modifier and optional ones can be interchanged
+* Return type MUST be always be before the method name
+* Method name follows java variable naming standards
+* Variable args
+    * int... args
+    * only ONE var args is allowed in the method declaration
+    * if multiple exists, then var args should at the end of the list
+* Access modifiers for the methods
+    * public 
+    * protected
+    * - (No mention - default modifier)
+    * private
+* Is default a keyword? 
+    * yes, switch cases
+* Java methods follows copy-by-value passing 
+    * Exact type
+    * Promotional type
+    * Autoboxing
+    * Var-args
+    * If none exists then compiler error
 
 ### OCJA-ArrayList
 * Can we directly an element into an arrayList using = operator
