@@ -8,6 +8,11 @@ public class App {
 
     public static void main(String[] args) {
 
+
+
+    }
+
+    private static void nestedForLoop() {
         //nested for-loop
         for (int i = 0; i < 2; i++)
             for (int j = 0; j < 2; j++) {
@@ -24,7 +29,6 @@ public class App {
                 //some other code goes here
             }
         }
-
     }
 
     private static void initMutliDimenArray() {

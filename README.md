@@ -23,6 +23,12 @@
                 {{1,2,3}, {4,5,6}},
                 {{7,8,9}}, {{10,11,12}}
         };`
+* when declaring and setting a size for a muti-dimensional array, the size of the first dimension should be mentioned while the rest could be optional
+    * `int[][] a = new int[2][];` legal
+    *  `int[][] a = new int[][];` illegal 
+* [More info on Arrays](https://www.quora.com/What-is-the-difference-between-multi-dimensional-arrays-in-Java-vs-C)
+* Does Arrays have size() or capacity()? 
+    * No
 
 ### OCJA-strings
 * String is a special object that can be created just by using string literal
