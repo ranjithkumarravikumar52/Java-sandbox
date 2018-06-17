@@ -16,7 +16,31 @@
     * instance (in the order they appear)
     * constructor
 ***
-* 
+* Data Encapsulation
+    * Hiding implementation details
+    * Done using setters and getters
+    * Also called POJO - Plain Old Java Objects
+    * EJB is someother Java Object
+    ***
+    * Helps in
+        * Maintainability 
+        * Flexibility
+        * Re-usability
+        * Avoid erros
+    ***
+    * Can be Read-Only
+        * If only getters are used
+    ***
+    * Can be Write-Only
+        * If only setters are used
+    ***
+    * Example
+        * Collection.sort(obj)
+        * Here we don't have to know the implementation details
+        * But it gets the work done
+***
+ 
+
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
 * Order of the access modifier and optional ones can be interchanged
