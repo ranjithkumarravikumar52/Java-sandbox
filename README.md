@@ -2,6 +2,39 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
 
+### OCJA-ArrayList
+* Can we directly an element into an arrayList using = operator
+    * `ArrayList<Integer> list = new ArrayList<>();
+    list[0] = 1; //not valid
+    list.add(1); //valid
+    ` 
+* Collections.sort()
+* Collections.binarySearch()
+* Arrays.asList()
+    * This new list IS fixed size
+    * Can modify the current element but can't add new elements
+* _.toArray()
+* Difference b/w
+    * for, for-each, iterator, ListIterator
+* Two arrayLists are equal if they have same elements and same order, whereas two arrays are equal if they have same elements even if they don't have same order - DOUBT
+    * 
+    ` int[] myArray = new int[]{1,2};
+             int[] myAnotherArray = new int[]{1,2};
+     
+             System.out.println(Arrays.equals(myArray, myAnotherArray));
+     
+             List<Integer> myArrayList = new ArrayList<>();
+             List<Integer> myAnotherArrayList = new ArrayList<>();
+     
+             myArrayList.add(1);
+             myArrayList.add(2);
+     
+             myAnotherArrayList.add(1);
+             myAnotherArrayList.add(2);
+     
+             System.out.println(myArrayList.equals(myAnotherArrayList));`
+
+
 ### OCJA-Arrays
 * Confused on how to create and initialize multi-dimensional arrays? 
 `

@@ -1,14 +1,26 @@
 package ocjapractice;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class App {
 
     public static void main(String[] args) {
 
+        int[] myArray = new int[]{1,2};
+        int[] myAnotherArray = new int[]{1,2};
 
+        System.out.println(Arrays.equals(myArray, myAnotherArray));
+
+        List<Integer> myArrayList = new ArrayList<>();
+        List<Integer> myAnotherArrayList = new ArrayList<>();
+
+        myArrayList.add(1);
+        myArrayList.add(2);
+
+        myAnotherArrayList.add(1);
+        myAnotherArrayList.add(2);
+
+        System.out.println(myArrayList.equals(myAnotherArrayList));
 
     }
 
