@@ -2,8 +2,35 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808)
 
-### Branch OCJA-strings
-#### Notes
+### OCJA-Arrays
+* Confused on how to create and initialize multi-dimensional arrays? 
+`
+        //create and initialize a 1-d array
+        int[] oneD = new int[]{
+                1,2,3,4
+        };
+
+        //create and initialize a 2-d array
+        int[][] twoD = new int[][]{
+                {1,2,3},
+                {4,5,6}
+        };
+
+        //create and initialize a 3-d array
+        //3d    -> an array of 2-d arrays
+        //      -> an array of (an array of 1-d arrays)
+        int[][][] threeD = new int[][][]{
+                {{1,2,3}, {4,5,6}},
+                {{7,8,9}}, {{10,11,12}}
+        };`
+* when declaring and setting a size for a muti-dimensional array, the size of the first dimension should be mentioned while the rest could be optional
+    * `int[][] a = new int[2][];` legal
+    *  `int[][] a = new int[][];` illegal 
+* [More info on Arrays](https://www.quora.com/What-is-the-difference-between-multi-dimensional-arrays-in-Java-vs-C)
+* Does Arrays have size() or capacity()? 
+    * No
+
+### OCJA-strings
 * String is a special object that can be created just by using string literal
     * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
 ***
@@ -61,7 +88,7 @@
     * **Careful about trick question on string builder immutability**   
 ***
 
-#### Notes on OCJA operations
+#### OCJA operations
 * [Types of operators - I](https://www.javatpoint.com/operators-in-java)
 * [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
 ***
@@ -110,7 +137,7 @@
     * i1==i2, i1.equalsTo(i2)
 * equalto vs ==
 - - -
-#### Notes on OCJA-control-flow
+### OCJA-control-flow
 * basic if-else work flow
 * complex if-else work flows
 * Ternary operators
@@ -131,9 +158,28 @@
     * infinite loop
     * never-executing loop
     * scope of loop variables
-    * does the body of the loop executes at least once?
+    * does the body of the loop executes at least once? 
+    
+* for a nested for-loop, curly braces for the outer loop is not needed
+`   //nested for-loop
+            for (int i = 0; i < 2; i++)
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+    
+            System.out.println();
+    
+            //nested for-loop
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+            }
+`
 - - -
-#### Notes on Java Basics Topic
+### OCJA-Basics
 * Classes are Java basic building blocks
 * They have two main elements
     * Fields/Variables - Hold the state of the class
@@ -154,8 +200,8 @@
     * Example when we use `Math.min()`, is there a way around to just call it `min()`
     * import static methods?
     * import static variables?
-
-#### Primitives
+***
+* Primitives
 
 | Keyword | Size | Examples |
 | :---         |     :---:      |          ---: |
@@ -168,7 +214,7 @@
 |  double  |   64-bits   |  123.4556789   |
 |   char   |   16-bits     |    'a'   |
 
-
+***
 * What is a literal?
     * Syntactic representation of primitive
 * Default interpretation of literals?
@@ -232,10 +278,7 @@
 
 
 ***
-
-
-### Branch: TestingPractice
-#### Introduction to debugging
+### Introduction to debugging
 * One special case about debugging is to understand third-party classes in your application when you don't have it's source code. Then debugging can help give us an higher understanding by examining the values we pass into those classes
 * Debuggers uses "socket" to latch on to the application where we can stop, continue or append the application to examine its details
 * To stop the application at a certain line of code, we use the help of `breakpoint`
@@ -250,7 +293,7 @@
         * `P` = parameters
         * `Watch`(More like glass) Icon = watches
 
-#### Helpful tips, check out for
+### Debugging Tips and Tricks
 * `Show execution point` - cursor jumps to the execution point
 * `Step over`
 * `Step into` - intellij skips going into jdk method calls (assumes that the bug might not be there in JDK)
@@ -268,14 +311,14 @@
     * Use `ALT+left click` to set up field watch point.
 * `Smart step into` - gives us options to choose the method to step into
 
-### Source Code analysis for the Branch:TestingPractice
+### Debugging challenge
 * Run the source code for this branch and observe the execution fails
 * Use debugger to examine where it went wrong
     * Should notice that instance variable and local variable inside add char method points to same object
     * Value gets appended to this object repeatedly till the memory is full
     * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
-
-### Branch: JUnit
+***
+### JUnit
 * Unit testing generally is first line of defense in Testing
 * Mostly done by developers/programmers themselves
 * Old-school testing was done by manually sending test values to a method and check if expected and actual results are same
@@ -304,16 +347,17 @@
 * Writing Tests for methods which throws exception
     * In the annotation include, `(excpeted = typeofexception.class)`
     * Or can also use try-catch block
+***
+* Parameterized Tests
+    * Motivation: How do we test five different values of deposits in our sample code?
+    * We can write five different test methods for each of these deposit values. However, this will make Test class really long and harder to maintain
+***
+* Steps
+    * Use `@RunWith(Parameterized.class)` to enable the class as parameterized
+    * Write the constructor for the class, as newly created objects can be instantiated through this constructor from multiple parameterized method
+    * Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
-#### Parameterized Tests
-* Motivation: How do we test five different values of deposits in our sample code?
-* We can write five different test methods for each of these deposit values. However, this will make Test class really long and harder to maintain
-
-##### Steps
-* Use `@RunWith(Parameterized.class)` to enable the class as parameterized
-* Write the constructor for the class, as newly created objects can be instantiated through this constructor from multiple parameterized method
-* Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
-
+***
 
 ### Thanks and Credits
 * Inspired and learned these information from [Tim Buchalka](https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview)

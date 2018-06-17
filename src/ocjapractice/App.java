@@ -1,11 +1,110 @@
 package ocjapractice;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class App {
+
     public static void main(String[] args) {
-//        ocjaStrings();
 
 
 
+    }
+
+    private static void nestedForLoop() {
+        //nested for-loop
+        for (int i = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+                //some other code goes here
+            }
+
+        System.out.println();
+
+        //nested for-loop
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+                //some other code goes here
+            }
+        }
+    }
+
+    private static void initMutliDimenArray() {
+        //create and initialize a 1-d array
+        int[] oneD = new int[]{
+                1, 2, 3, 4
+        };
+
+        //create and initialize a 2-d array
+        int[][] twoD = new int[][]{
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        //create and initialize a 3-d array
+        //3d    -> an array of 2-d arrays
+        //      -> an array of (an array of 1-d arrays)
+        int[][][] threeD = new int[][][]{
+                {{1, 2, 3}, {4, 5, 6}},
+                {{7, 8, 9}}, {{10, 11, 12}}
+        };
+    }
+
+    private static int count(boolean b, boolean... booleans) {
+        System.out.println("b = " + booleans.length);
+        return booleans.length;
+    }
+
+
+    private static int[] doSomething(int[] ints) {
+        ints = new int[]{1, 2, 3, 4, 5, 6, 6, 7};
+        return ints;
+    }
+
+    private static void arrayList() {
+        List<String> strings = new ArrayList<>();
+
+        strings.add("Pug");
+        strings.add("Husky");
+        strings.add("Doberman");
+
+
+//        System.out.println("strings = " + strings+"\n");
+//
+//        for (int i = 0; i < strings.size(); i++) {
+////            System.out.println("strings["+i+"] = " + strings.get(i));
+//            strings.remove(i);
+//        }
+//
+//        System.out.println(strings);
+
+//        for(String s: strings){
+//            strings.remove(s);
+//        }
+
+
+        for (Iterator<String> stringIterator = strings.iterator(); stringIterator.hasNext(); ) {
+            System.out.println(stringIterator.next());
+        }
+    }
+
+    private static void strings() {
+        String[] strings = {"John", "Jim", "Jack"};
+        int[] ints = {1, 2, 3};
+
+        for (String s : strings) {
+            for (int i : ints) {
+                System.out.println("Inside inner loop -> " + i);
+                if (s.equals("Jim")) {
+                    continue;
+                }
+                System.out.print(s + " ");
+                System.out.print(i + "\n");
+            }
+            System.out.println();
+        }
     }
 
     private static void ocjaStrings() {
