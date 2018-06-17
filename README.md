@@ -39,7 +39,16 @@
         * Here we don't have to know the implementation details
         * But it gets the work done
 ***
- 
+* Immutable Classes
+    * Can't change/modify classes
+    * Remove setters
+    * All field variables are final and private
+***
+* Any operation should return a new object just like string methods, while keeping the current object fields intact
+* Example
+    * ``String s = "Hello; String newS = s.toLowerCase(); ``
+    * Here s still remains "Hello", while the method returns a new String Object
+*** 
 
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
