@@ -1,11 +1,74 @@
 package ocjapractice;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class App {
+
+    public static final String STRING;
+
+    static {
+        STRING = "ranjith";
+    }
+
     public static void main(String[] args) {
-//        ocjaStrings();
+
+    }
+
+    private static int count(boolean b, boolean... booleans) {
+        System.out.println("b = " + booleans.length);
+        return booleans.length;
+    }
 
 
+    private static int[] doSomething(int[] ints) {
+        ints = new int[]{1, 2, 3, 4, 5, 6, 6, 7};
+        return ints;
+    }
 
+    private static void arrayList() {
+        List<String> strings = new ArrayList<>();
+
+        strings.add("Pug");
+        strings.add("Husky");
+        strings.add("Doberman");
+
+
+//        System.out.println("strings = " + strings+"\n");
+//
+//        for (int i = 0; i < strings.size(); i++) {
+////            System.out.println("strings["+i+"] = " + strings.get(i));
+//            strings.remove(i);
+//        }
+//
+//        System.out.println(strings);
+
+//        for(String s: strings){
+//            strings.remove(s);
+//        }
+
+
+        for (Iterator<String> stringIterator = strings.iterator(); stringIterator.hasNext(); ) {
+            System.out.println(stringIterator.next());
+        }
+    }
+
+    private static void strings() {
+        String[] strings = {"John", "Jim", "Jack"};
+        int[] ints = {1, 2, 3};
+
+        for (String s : strings) {
+            for (int i : ints) {
+                System.out.println("Inside inner loop -> " + i);
+                if (s.equals("Jim")) {
+                    continue;
+                }
+                System.out.print(s + " ");
+                System.out.print(i + "\n");
+            }
+            System.out.println();
+        }
     }
 
     private static void ocjaStrings() {
