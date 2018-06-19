@@ -103,6 +103,29 @@
     * Var-args
     * If none exists then compiler error
 
+### Interfaces
+* All the variables/fields/variables defined inside the interface are constants
+* Using public, static and final for these constants are redundant
+***
+* Methods inside public and abstract don't have a body
+***
+* Java 8 has a default interface methods
+* They always have a body
+* Don't be confused when a method declaration shows `default public [return_type][method_name]`
+* since Java 8, methods inside interface are not abstract implicitly
+    * Cos we have default and static interface methods now
+* Interfaces don't extends/implement object class unlike inheritance through class "extends"
+***
+* static interface methods
+* have to be referenced using the class variable
+* Can't be overridden
+* Always has a body
+***
+* Be mindful about the situation where a class extends two interfaces with exact same default methods. 
+    * Extend one interface with another to avoid confusion
+***
+* Abstract classes vs interface methods
+
 ### OCJA-ArrayList
 * Can we directly an element into an arrayList using = operator
     * `ArrayList<Integer> list = new ArrayList<>();
