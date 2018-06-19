@@ -512,7 +512,25 @@
 * Before generics, class case exception was a major run-time nightmare for many
 ***
 * Generics can be applied to class, methods and interfaces
-
+***
+* Comparable interface
+    * Restricting to compare two classes with the same type parameters
+    * Comparing Football Team with Football Team not with Baseball Team
+    * Logic is implemented by overriding compareTo() abstract method  
+    * Collections.sort() depends on this method
+***
+* Challenge
+`        // Create a generic class to implement a league table for a sport.
+         // The class should allow teams to be added to the list, and store
+         // a list of teams that belong to the league.
+         //
+         // Your class should have a method to print out the teams in order,
+         // with the team at the top of the league printed first.
+         //
+         // Only teams of the same type should be added to any particular
+         // instance of the league class - the program should fail to compile
+         // if an attempt is made to add an incompatible team.`
+ 
 
 ***
 ### IntelliJ Tips
