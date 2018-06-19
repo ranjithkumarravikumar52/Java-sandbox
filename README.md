@@ -1,7 +1,8 @@
 # Java Sandbox
 
-### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
-- - -
+### Oracle certified associate
+* [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
+***
 ### OCJA-Basics
 * Classes are Java basic building blocks
 * They have two main elements
@@ -85,7 +86,6 @@
     * Converting primitive to wrapper or vice-versa automatically by the compiler
 
 ***
-- - -
 ### OCJA-control-flow
 * basic if-else work flow
 * complex if-else work flows
@@ -127,7 +127,7 @@
                 }
             }
 `
-
+***
 #### OCJA operations
 * [Types of operators - I](https://www.javatpoint.com/operators-in-java)
 * [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
@@ -295,7 +295,7 @@
              myAnotherArrayList.add(2);
      
              System.out.println(myArrayList.equals(myAnotherArrayList));` 
-             
+***             
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
 * Order of the access modifier and optional ones can be interchanged
@@ -318,7 +318,7 @@
     * Autoboxing
     * Var-args
     * If none exists then compiler error
-    
+***   
 ### OCJA-class design
 * why is private constructor used? 
     * Singleton Pattern - check [this](https://stackoverflow.com/questions/17342815/what-is-the-use-of-private-constructor-in-java)
@@ -441,7 +441,7 @@
     * Checkout the icons or logo for each variable to knows its type in the variables window during debug mode
         * `P` = parameters
         * `Watch`(More like glass) Icon = watches
-
+***
 ### Debugging Tips and Tricks
 * `Show execution point` - cursor jumps to the execution point
 * `Step over`
@@ -459,7 +459,7 @@
 * `Field watch points` - whenever the value is changed, the application suspends
     * Use `ALT+left click` to set up field watch point.
 * `Smart step into` - gives us options to choose the method to step into
-
+***
 ### Debugging challenge
 * Run the source code for this branch and observe the execution fails
 * Use debugger to examine where it went wrong
@@ -507,10 +507,19 @@
     * Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
 ***
+### Generics
+* since 1.5
+* Before generics, class case exception was a major run-time nightmare for many
+***
+* Generics can be applied to class, methods and interfaces
+
+
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
 * Using "structure" in the intellij to understand hierarchy and visibility of the classes. 
+* Use "messages" to check for any warnings and always aim to write a "good" code by making sure a green tick is shown at the top right of the screen
 ***
 ### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
