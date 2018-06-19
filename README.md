@@ -60,6 +60,25 @@
     4. If the parent class does not have no-arg constructor and the child does not define any constructor, compiler will show error and try to insert a default no-argument constructor into child class
     5. If the parent does not have no-arg constructor, the compiler requires an explicit call to a parent constructor in each child class. 
 *** 
+* Using "structure" in the intelliJ to understand hierarchy and visibility of the classes. 
+***
+
+### Method-overriding
+* When overriding parent class methods, using the super. keyword, it doesn't have be the first line in the method unlike super(), which has to be on the first line in a constructor body. 
+* final methods can't be overridden
+    * why? 
+* static methods can't be overridden
+    * why? 
+* private methods can't be overridden
+    * why? 
+* can we have static abstract methods? 
+    * no
+* Always use higher access modifier when overriding methods [Check this](https://stackoverflow.com/questions/215497/in-java-difference-between-package-private-public-protected-and-private)
+    * public 
+    * protected
+    * no modifier
+    * private
+    
 
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
