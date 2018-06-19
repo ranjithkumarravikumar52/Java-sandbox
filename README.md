@@ -2,6 +2,65 @@
 
 ### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
 
+### OCJA-class design
+* why is private constructor used? 
+    * Singleton Pattern - check [this](https://stackoverflow.com/questions/17342815/what-is-the-use-of-private-constructor-in-java)
+* this()
+    * to optimize overloaded constructors by removing duplicate code
+    * should be the first line of code in any constructor. 
+    * never ending constructor chaining is a compiler error not a run-time exception
+***
+* Order of initialization
+    * super()
+    * static (in the order they appear)
+    * instance (in the order they appear)
+    * constructor
+***
+* Data Encapsulation
+    * Hiding implementation details
+    * Done using setters and getters
+    * Also called POJO - Plain Old Java Objects
+    * EJB is someother Java Object
+    ***
+    * Helps in
+        * Maintainability 
+        * Flexibility
+        * Re-usability
+        * Avoid erros
+    ***
+    * Can be Read-Only
+        * If only getters are used
+    ***
+    * Can be Write-Only
+        * If only setters are used
+    ***
+    * Example
+        * Collection.sort(obj)
+        * Here we don't have to know the implementation details
+        * But it gets the work done
+***
+* Immutable Classes
+    * Can't change/modify classes
+    * Remove setters
+    * All field variables are final and private
+***
+* Any operation should return a new object just like string methods, while keeping the current object fields intact
+* Example
+    * ``String s = "Hello; String newS = s.toLowerCase(); ``
+    * Here s still remains "Hello", while the method returns a new String Object
+***
+* Inheritance
+    * Remember, how order of constructors is executed in chain of sub-classes
+    * First order is super()
+***
+* Constructor Definition Rules
+    1. The first statement of every constructor is a call to another constructor within the same class using this(), or a call to a parent class using super()
+    2. If super() call is NOT declared in a constructor, compiler will insert no-argument super() as first statement of the constructor
+    3. The super() can't be used after the first statement of the constructor
+    4. If the parent class does not have no-arg constructor and the child does not define any constructor, compiler will show error and try to insert a default no-argument constructor into child class
+    5. If the parent does not have no-arg constructor, the compiler requires an explicit call to a parent constructor in each child class. 
+*** 
+
 ### OCJA-methods
 * `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
 * Order of the access modifier and optional ones can be interchanged
@@ -39,6 +98,8 @@
 * _.toArray()
 * Difference b/w
     * for, for-each, iterator, ListIterator
+    * concurrent modification exception
+***
 * Two arrayLists are equal if they have same elements and same order, whereas two arrays are equal if they have same elements even if they don't have same order - DOUBT
     * 
     ` int[] myArray = new int[]{1,2};
