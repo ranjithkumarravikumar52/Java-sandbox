@@ -48,6 +48,17 @@
 * Example
     * ``String s = "Hello; String newS = s.toLowerCase(); ``
     * Here s still remains "Hello", while the method returns a new String Object
+***
+* Inheritance
+    * Remember, how order of constructors is executed in chain of sub-classes
+    * First order is super()
+***
+* Constructor Definition Rules
+    1. The first statement of every constructor is a call to another constructor within the same class using this(), or a call to a parent class using super()
+    2. If super() call is NOT declared in a constructor, compiler will insert no-argument super() as first statement of the constructor
+    3. The super() can't be used after the first statement of the constructor
+    4. If the parent class does not have no-arg constructor and the child does not define any constructor, compiler will show error and try to insert a default no-argument constructor into child class
+    5. If the parent does not have no-arg constructor, the compiler requires an explicit call to a parent constructor in each child class. 
 *** 
 
 ### OCJA-methods
