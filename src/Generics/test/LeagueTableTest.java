@@ -10,11 +10,11 @@ import static org.junit.Assert.assertTrue;
 
 public class LeagueTableTest {
 
-    private LeagueTable leagueTable;
+    private LeagueTable<Team> leagueTable;
 
     @Before
     public void setup() {
-        leagueTable = new LeagueTable();
+        leagueTable = new LeagueTable<>();
     }
 
     @Test
@@ -51,5 +51,6 @@ public class LeagueTableTest {
     public void addNullTeamToTheLeague() {
         assertFalse(leagueTable.addTeamToTheLeague(null));
     }
+
 
 }
