@@ -1,343 +1,8 @@
 # Java Sandbox
 
-### Oracle certified associate - [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
-
-### OCJA-class design
-* why is private constructor used? 
-    * Singleton Pattern - check [this](https://stackoverflow.com/questions/17342815/what-is-the-use-of-private-constructor-in-java)
-* this()
-    * to optimize overloaded constructors by removing duplicate code
-    * should be the first line of code in any constructor. 
-    * never ending constructor chaining is a compiler error not a run-time exception
+### Oracle certified associate
+* [Topics](https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-808) 
 ***
-* Order of initialization
-    * super()
-    * static (in the order they appear)
-    * instance (in the order they appear)
-    * constructor
-***
-* Data Encapsulation
-    * Hiding implementation details
-    * Done using setters and getters
-    * Also called POJO - Plain Old Java Objects
-    * EJB is someother Java Object
-    ***
-    * Helps in
-        * Maintainability 
-        * Flexibility
-        * Re-usability
-        * Avoid erros
-    ***
-    * Can be Read-Only
-        * If only getters are used
-    ***
-    * Can be Write-Only
-        * If only setters are used
-    ***
-    * Example
-        * Collection.sort(obj)
-        * Here we don't have to know the implementation details
-        * But it gets the work done
-***
-* Immutable Classes
-    * Can't change/modify classes
-    * Remove setters
-    * All field variables are final and private
-***
-* Any operation should return a new object just like string methods, while keeping the current object fields intact
-* Example
-    * ``String s = "Hello; String newS = s.toLowerCase(); ``
-    * Here s still remains "Hello", while the method returns a new String Object
-***
-* Inheritance
-    * Remember, how order of constructors is executed in chain of sub-classes
-    * First order is super()
-***
-* Constructor Definition Rules
-    1. The first statement of every constructor is a call to another constructor within the same class using this(), or a call to a parent class using super()
-    2. If super() call is NOT declared in a constructor, compiler will insert no-argument super() as first statement of the constructor
-    3. The super() can't be used after the first statement of the constructor
-    4. If the parent class does not have no-arg constructor and the child does not define any constructor, compiler will show error and try to insert a default no-argument constructor into child class
-    5. If the parent does not have no-arg constructor, the compiler requires an explicit call to a parent constructor in each child class. 
-*** 
-* Using "structure" in the intelliJ to understand hierarchy and visibility of the classes. 
-***
-
-### Method-overriding
-* When overriding parent class methods, using the super. keyword, it doesn't have be the first line in the method unlike super(), which has to be on the first line in a constructor body. 
-* final methods can't be overridden
-    * why? 
-* static methods can't be overridden
-    * why? 
-* private methods can't be overridden
-    * why? 
-* can we have static abstract methods? 
-    * no
-* Always use higher access modifier when overriding methods [Check this](https://stackoverflow.com/questions/215497/in-java-difference-between-package-private-public-protected-and-private)
-    * public 
-    * protected
-    * no modifier
-    * private
-    
-
-### OCJA-methods
-* `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
-* Order of the access modifier and optional ones can be interchanged
-* Return type MUST be always be before the method name
-* Method name follows java variable naming standards
-* Variable args
-    * int... args
-    * only ONE var args is allowed in the method declaration
-    * if multiple exists, then var args should at the end of the list
-* Access modifiers for the methods
-    * public 
-    * protected
-    * - (No mention - default modifier)
-    * private
-* Is default a keyword? 
-    * yes, switch cases
-* Java methods follows copy-by-value passing 
-    * Exact type
-    * Promotional type
-    * Autoboxing
-    * Var-args
-    * If none exists then compiler error
-
-### Interfaces
-* All the variables/fields/variables defined inside the interface are constants
-* Using public, static and final for these constants are redundant
-***
-* Methods inside public and abstract don't have a body
-***
-* Java 8 has a default interface methods
-* They always have a body
-* Don't be confused when a method declaration shows `default public [return_type][method_name]`
-* since Java 8, methods inside interface are not abstract implicitly
-    * Cos we have default and static interface methods now
-* Interfaces don't extends/implement object class unlike inheritance through class "extends"
-***
-* static interface methods
-* have to be referenced using the class variable
-* Can't be overridden
-* Always has a body
-***
-* Be mindful about the situation where a class extends two interfaces with exact same default methods. 
-    * Extend one interface with another to avoid confusion
-***
-* Abstract classes vs interface methods
-
-### OCJA-ArrayList
-* Can we directly an element into an arrayList using = operator
-    * `ArrayList<Integer> list = new ArrayList<>();
-    list[0] = 1; //not valid
-    list.add(1); //valid
-    ` 
-* Collections.sort()
-* Collections.binarySearch()
-* Arrays.asList()
-    * This new list IS fixed size
-    * Can modify the current element but can't add new elements
-* _.toArray()
-* Difference b/w
-    * for, for-each, iterator, ListIterator
-    * concurrent modification exception
-***
-* Two arrayLists are equal if they have same elements and same order, whereas two arrays are equal if they have same elements even if they don't have same order - DOUBT
-    * 
-    ` int[] myArray = new int[]{1,2};
-             int[] myAnotherArray = new int[]{1,2};
-     
-             System.out.println(Arrays.equals(myArray, myAnotherArray));
-     
-             List<Integer> myArrayList = new ArrayList<>();
-             List<Integer> myAnotherArrayList = new ArrayList<>();
-     
-             myArrayList.add(1);
-             myArrayList.add(2);
-     
-             myAnotherArrayList.add(1);
-             myAnotherArrayList.add(2);
-     
-             System.out.println(myArrayList.equals(myAnotherArrayList));`
-
-
-### OCJA-Arrays
-* Confused on how to create and initialize multi-dimensional arrays? 
-`
-        //create and initialize a 1-d array
-        int[] oneD = new int[]{
-                1,2,3,4
-        };
-
-        //create and initialize a 2-d array
-        int[][] twoD = new int[][]{
-                {1,2,3},
-                {4,5,6}
-        };
-
-        //create and initialize a 3-d array
-        //3d    -> an array of 2-d arrays
-        //      -> an array of (an array of 1-d arrays)
-        int[][][] threeD = new int[][][]{
-                {{1,2,3}, {4,5,6}},
-                {{7,8,9}}, {{10,11,12}}
-        };`
-* when declaring and setting a size for a muti-dimensional array, the size of the first dimension should be mentioned while the rest could be optional
-    * `int[][] a = new int[2][];` legal
-    *  `int[][] a = new int[][];` illegal 
-* [More info on Arrays](https://www.quora.com/What-is-the-difference-between-multi-dimensional-arrays-in-Java-vs-C)
-* Does Arrays have size() or capacity()? 
-    * No
-
-### OCJA-strings
-* String is a special object that can be created just by using string literal
-    * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
-***
-* Be careful about "+" operator present in between operands type
-    * if both operands are int/numeric addition takes place
-    * if one of them is string then concatenation
-        * NOTE: the order in which the string type detected matters!
-* Immutable strings
-    * not changeable strings
-    * once the object is created it cannot be changed
-    * almost every method that is called upon a string variable will return a new string while keeping the "called" string variable intact, unless it is de-referenced and assigned it itself
-* String concatenation 
-    * Can be done using "+" operator
-    * Can be done using concat() 
-* To "check" the memory address of any object/variable use
-    * `System.identityHashCode(variable)`
-* String pool
-    * combination of string literal and string variable
-    * check if the memory locations are same
-    * `str1 = "abc"`, `str2 = "ab"`, `str3 = str2 + "c"`, `str4 = "ab" + "c"`
-        * is `str1 == str3`
-        * is `str1 == str4`
-***
-* String methods (13) - sequence of char, immutable strings
-    * str.length()
-    * str.charAt(i)
-    * str.indexOf('char')
-    * str.indexOf('char', fromIndex: 2)
-    * str.substring(start)
-    * str.substring(start, end) //test the range of start, end
-    * str.toUpperCase
-    * str.toLowerCase
-    ***
-    * str.equals()
-    * str.equalsIgnoreCase()
-    ***
-    * str.startsWith()
-    * str.endsWith()
-    ***
-    * str.contains()
-    ***
-    * str.replace(oldChar, newChar)
-    * str.replace(stringVariable, stringVariable)
-    * str.replace(literal, literal)
-    ***
-    * str.trim() - removes starting and ending empty spaces
-***
-* chaining methods
-    * Can be done only on methods that returns some object
-***
-* String builder
-    * Not immutable 
-    * Helps avoid create multiple objects when used only with String methods 
-    * sb.append()
-    * **Careful about trick question on string builder immutability**   
-***
-
-#### OCJA operations
-* [Types of operators - I](https://www.javatpoint.com/operators-in-java)
-* [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
-***
-* Operators can be applied to one, two or three operands
-* Java follows operator precedence when two operators have same precedence
-    * It evaluates from left to right
-***
-* `int a  = 3 - 2 + 2 * 2 + 3`
-    * a = 8;
-* `int a  = 4 / 2 + 1 - 4 * 2 + 10`
-    * a = 5;
-* `int a  = 4 `, `int b = 3 - 2 * --a`
-    * a = 3, b = -3
-* `int a  = 4 `, `int b = 3 - 2 * a--`
-    * a = 3, b = -5
-* `long c = 2`, `long d = 4 + 3 * c++`
-    * c = 3, d = 10
-* `result = 10 - 3 * (2 + 1) - 4 / (1 + 3)`
-    * 0
-* `int i = 10 % 2`
-    * 0
-* `int j = 10 % 3`
-    * 1
-* `int f = 12`, `int g = 5`, `int h = 2`
-    * `int m = f / 2 - 10 % (4 + 3) - 2 * f % g - h * 3`
-    * -7
-***
-* Promotion - When two values have different data types, Java will promote one of the values to the larger data type
-* In other words, converting "smaller" type to "bigger" type
-    * `int x = 5`, `double y = 10.55`, `double result = x + y`;
-        * 15.55 or 15 ? 
-        * 15.55
-* Casting - opposite of promotion
-* Converting "bigger" type to "smaller" type
-    * `int x = 5`, `double y = 10.55`, `int result = (int) (x + y)`;
-        * 15 or 15.55
-        * 15
-* Be mindful of assigning expression which is smaller and bigger data type to a smaller data type as this will lead to a compilation error unless "cast" is done
-* Overflow of data types
-* Underflow of data types
-***
-* Unary operators 
-* Wrapper class pool values
-    * Integer i1 = 10; 
-    * Integer i2 = 10; 
-    * i1==i2, i1.equalsTo(i2)
-* equalto vs ==
-- - -
-### OCJA-control-flow
-* basic if-else work flow
-* complex if-else work flows
-* Ternary operators
-    * Use different datatypes in the ternary operator
-    * Need to have same datatypes on both sides
-    * Short circuit ternary operator evaluation
-    * Ternary operator with unary operator
-        * f = 3; f = f++; 
-            * f = 3 or 4 ?
-            * 3
-* switch case
-    * supported data types
-        * int, short, char, byte and their wrappers (for the exam)
-    * what's the minimum number of cases/branches that is allowed in Java?
-    * pitfalls of switch case
-    * case variables should always be constants
-* while loop/do-while/for loop
-    * infinite loop
-    * never-executing loop
-    * scope of loop variables
-    * does the body of the loop executes at least once? 
-    
-* for a nested for-loop, curly braces for the outer loop is not needed
-`   //nested for-loop
-            for (int i = 0; i < 2; i++)
-                for (int j = 0; j < 2; j++) {
-                    System.out.println("i = " + i + ", j = " + j);
-                    //some other code goes here
-                }
-    
-            System.out.println();
-    
-            //nested for-loop
-            for (int i = 0; i < 2; i++){
-                for (int j = 0; j < 2; j++) {
-                    System.out.println("i = " + i + ", j = " + j);
-                    //some other code goes here
-                }
-            }
-`
-- - -
 ### OCJA-Basics
 * Classes are Java basic building blocks
 * They have two main elements
@@ -353,8 +18,6 @@
     * Answer: Use full class name for Both, don't import their packages
 * Can we import classes from default non-root packages?
     * No.
-* Auto format in IntelliJ - `Ctrl + Alt + L`
-* Auto import `Ctrl + Alt + O`
 * What is a static import?
     * Example when we use `Math.min()`, is there a way around to just call it `min()`
     * import static methods?
@@ -423,18 +86,345 @@
     * Converting primitive to wrapper or vice-versa automatically by the compiler
 
 ***
+### OCJA-control-flow
+* basic if-else work flow
+* complex if-else work flows
+* Ternary operators
+    * Use different datatypes in the ternary operator
+    * Need to have same datatypes on both sides
+    * Short circuit ternary operator evaluation
+    * Ternary operator with unary operator
+        * f = 3; f = f++; 
+            * f = 3 or 4 ?
+            * 3
+* switch case
+    * supported data types
+        * int, short, char, byte and their wrappers (for the exam)
+    * what's the minimum number of cases/branches that is allowed in Java?
+    * pitfalls of switch case
+    * case variables should always be constants
+* while loop/do-while/for loop
+    * infinite loop
+    * never-executing loop
+    * scope of loop variables
+    * does the body of the loop executes at least once? 
+    
+* for a nested for-loop, curly braces for the outer loop is not needed
+`   //nested for-loop
+            for (int i = 0; i < 2; i++)
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+    
+            System.out.println();
+    
+            //nested for-loop
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 2; j++) {
+                    System.out.println("i = " + i + ", j = " + j);
+                    //some other code goes here
+                }
+            }
+`
+***
+#### OCJA operations
+* [Types of operators - I](https://www.javatpoint.com/operators-in-java)
+* [Types of operators - II](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
+***
+* Operators can be applied to one, two or three operands
+* Java follows operator precedence when two operators have same precedence
+    * It evaluates from left to right
+***
+* `int a  = 3 - 2 + 2 * 2 + 3`
+    * a = 8;
+* `int a  = 4 / 2 + 1 - 4 * 2 + 10`
+    * a = 5;
+* `int a  = 4 `, `int b = 3 - 2 * --a`
+    * a = 3, b = -3
+* `int a  = 4 `, `int b = 3 - 2 * a--`
+    * a = 3, b = -5
+* `long c = 2`, `long d = 4 + 3 * c++`
+    * c = 3, d = 10
+* `result = 10 - 3 * (2 + 1) - 4 / (1 + 3)`
+    * 0
+* `int i = 10 % 2`
+    * 0
+* `int j = 10 % 3`
+    * 1
+* `int f = 12`, `int g = 5`, `int h = 2`
+    * `int m = f / 2 - 10 % (4 + 3) - 2 * f % g - h * 3`
+    * -7
+***
+* Promotion - When two values have different data types, Java will promote one of the values to the larger data type
+* In other words, converting "smaller" type to "bigger" type
+    * `int x = 5`, `double y = 10.55`, `double result = x + y`;
+        * 15.55 or 15 ? 
+        * 15.55
+* Casting - opposite of promotion
+* Converting "bigger" type to "smaller" type
+    * `int x = 5`, `double y = 10.55`, `int result = (int) (x + y)`;
+        * 15 or 15.55
+        * 15
+* Be mindful of assigning expression which is smaller and bigger data type to a smaller data type as this will lead to a compilation error unless "cast" is done
+* Overflow of data types
+* Underflow of data types
+***
+* Unary operators 
+* Wrapper class pool values
+    * Integer i1 = 10; 
+    * Integer i2 = 10; 
+    * i1==i2, i1.equalsTo(i2)
+* equalto vs ==
+***
+### OCJA-strings
+* String is a special object that can be created just by using string literal
+    * Even though new can be used to create string, it is redundant, however it legal, because of **string pool**
+***
+* Be careful about "+" operator present in between operands type
+    * if both operands are int/numeric addition takes place
+    * if one of them is string then concatenation
+        * NOTE: the order in which the string type detected matters!
+* Immutable strings
+    * not changeable strings
+    * once the object is created it cannot be changed
+    * almost every method that is called upon a string variable will return a new string while keeping the "called" string variable intact, unless it is de-referenced and assigned it itself
+* String concatenation 
+    * Can be done using "+" operator
+    * Can be done using concat() 
+* To "check" the memory address of any object/variable use
+    * `System.identityHashCode(variable)`
+* String pool
+    * combination of string literal and string variable
+    * check if the memory locations are same
+    * `str1 = "abc"`, `str2 = "ab"`, `str3 = str2 + "c"`, `str4 = "ab" + "c"`
+        * is `str1 == str3`
+        * is `str1 == str4`
+***
+* String methods (13) - sequence of char, immutable strings
+    * str.length()
+    * str.charAt(i)
+    * str.indexOf('char')
+    * str.indexOf('char', fromIndex: 2)
+    * str.substring(start)
+    * str.substring(start, end) //test the range of start, end
+    * str.toUpperCase
+    * str.toLowerCase
+    ***
+    * str.equals()
+    * str.equalsIgnoreCase()
+    ***
+    * str.startsWith()
+    * str.endsWith()
+    ***
+    * str.contains()
+    ***
+    * str.replace(oldChar, newChar)
+    * str.replace(stringVariable, stringVariable)
+    * str.replace(literal, literal)
+    ***
+    * str.trim() - removes starting and ending empty spaces
+***
+* chaining methods
+    * Can be done only on methods that returns some object
+***
+* String builder
+    * Not immutable 
+    * Helps avoid create multiple objects when used only with String methods 
+    * sb.append()
+    * **Careful about trick question on string builder immutability**   
+***
+### OCJA-Arrays
+* Confused on how to create and initialize multi-dimensional arrays? 
+`
+        //create and initialize a 1-d array
+        int[] oneD = new int[]{
+                1,2,3,4
+        };
+
+        //create and initialize a 2-d array
+        int[][] twoD = new int[][]{
+                {1,2,3},
+                {4,5,6}
+        };
+
+        //create and initialize a 3-d array
+        //3d    -> an array of 2-d arrays
+        //      -> an array of (an array of 1-d arrays)
+        int[][][] threeD = new int[][][]{
+                {{1,2,3}, {4,5,6}},
+                {{7,8,9}}, {{10,11,12}}
+        };`
+* when declaring and setting a size for a muti-dimensional array, the size of the first dimension should be mentioned while the rest could be optional
+    * `int[][] a = new int[2][];` legal
+    *  `int[][] a = new int[][];` illegal 
+* [More info on Arrays](https://www.quora.com/What-is-the-difference-between-multi-dimensional-arrays-in-Java-vs-C)
+* Does Arrays have size() or capacity()? 
+    * No
+***
+### OCJA-ArrayList
+* Can we directly an element into an arrayList using = operator
+    * `ArrayList<Integer> list = new ArrayList<>();
+    list[0] = 1; //not valid
+    list.add(1); //valid
+    ` 
+* Collections.sort()
+* Collections.binarySearch()
+* Arrays.asList()
+    * This new list IS fixed size
+    * Can modify the current element but can't add new elements
+* _.toArray()
+* Difference b/w
+    * for, for-each, iterator, ListIterator
+    * concurrent modification exception
+***
+* Two arrayLists are equal if they have same elements and same order, whereas two arrays are equal if they have same elements even if they don't have same order - DOUBT
+    * 
+    ` int[] myArray = new int[]{1,2};
+             int[] myAnotherArray = new int[]{1,2};
+     
+             System.out.println(Arrays.equals(myArray, myAnotherArray));
+     
+             List<Integer> myArrayList = new ArrayList<>();
+             List<Integer> myAnotherArrayList = new ArrayList<>();
+     
+             myArrayList.add(1);
+             myArrayList.add(2);
+     
+             myAnotherArrayList.add(1);
+             myAnotherArrayList.add(2);
+     
+             System.out.println(myArrayList.equals(myAnotherArrayList));` 
+***             
+### OCJA-methods
+* `[Access modifier][optional modifer 1][optional modifer 2][return type][methodname](param1, param2, ... param n)`
+* Order of the access modifier and optional ones can be interchanged
+* Return type MUST be always be before the method name
+* Method name follows java variable naming standards
+* Variable args
+    * int... args
+    * only ONE var args is allowed in the method declaration
+    * if multiple exists, then var args should at the end of the list
+* Access modifiers for the methods
+    * public 
+    * protected
+    * - (No mention - default modifier)
+    * private
+* Is default a keyword? 
+    * yes, switch cases
+* Java methods follows copy-by-value passing 
+    * Exact type
+    * Promotional type
+    * Autoboxing
+    * Var-args
+    * If none exists then compiler error
+***   
+### OCJA-class design
+* why is private constructor used? 
+    * Singleton Pattern - check [this](https://stackoverflow.com/questions/17342815/what-is-the-use-of-private-constructor-in-java)
+* this()
+    * to optimize overloaded constructors by removing duplicate code
+    * should be the first line of code in any constructor. 
+    * never ending constructor chaining is a compiler error not a run-time exception
+***
+* Order of initialization
+    * super()
+    * static (in the order they appear)
+    * instance (in the order they appear)
+    * constructor
+***
+* Data Encapsulation
+    * Hiding implementation details
+    * Done using setters and getters
+    * Also called POJO - Plain Old Java Objects
+    * EJB is someother Java Object
+    ***
+    * Helps in
+        * Maintainability 
+        * Flexibility
+        * Re-usability
+        * Avoid erros
+    ***
+    * Can be Read-Only
+        * If only getters are used
+    ***
+    * Can be Write-Only
+        * If only setters are used
+    ***
+    * Example
+        * Collection.sort(obj)
+        * Here we don't have to know the implementation details
+        * But it gets the work done
+***
+* Immutable Classes
+    * Can't change/modify classes
+    * Remove setters
+    * All field variables are final and private
+***
+* Any operation should return a new object just like string methods, while keeping the current object fields intact
+* Example
+    * ``String s = "Hello; String newS = s.toLowerCase(); ``
+    * Here s still remains "Hello", while the method returns a new String Object
+***
+* Inheritance
+    * Remember, how order of constructors is executed in chain of sub-classes
+    * First order is super()
+***
+* Constructor Definition Rules
+    1. The first statement of every constructor is a call to another constructor within the same class using this(), or a call to a parent class using super()
+    2. If super() call is NOT declared in a constructor, compiler will insert no-argument super() as first statement of the constructor
+    3. The super() can't be used after the first statement of the constructor
+    4. If the parent class does not have no-arg constructor and the child does not define any constructor, compiler will show error and try to insert a default no-argument constructor into child class
+    5. If the parent does not have no-arg constructor, the compiler requires an explicit call to a parent constructor in each child class. 
+*** 
+
+### Method-overriding
+* When overriding parent class methods, using the super. keyword, it doesn't have be the first line in the method unlike super(), which has to be on the first line in a constructor body. 
+* final methods can't be overridden
+    * why? 
+* static methods can't be overridden
+    * why? 
+* private methods can't be overridden
+    * why? 
+* can we have static abstract methods? 
+    * no
+* Always use higher access modifier when overriding methods [Check this](https://stackoverflow.com/questions/215497/in-java-difference-between-package-private-public-protected-and-private)
+    * public 
+    * protected
+    * no modifier
+    * private 
+***
+### Interfaces
+* All the variables/fields/variables defined inside the interface are constants
+* Using public, static and final for these constants are redundant
+***
+* Methods inside public and abstract don't have a body
+***
+* Java 8 has a default interface methods
+* They always have a body
+* Don't be confused when a method declaration shows `default public [return_type][method_name]`
+* since Java 8, methods inside interface are not abstract implicitly
+    * Cos we have default and static interface methods now
+* Interfaces don't extends/implement object class unlike inheritance through class "extends"
+***
+* static interface methods
+* have to be referenced using the class variable
+* Can't be overridden
+* Always has a body
+***
+* Be mindful about the situation where a class extends two interfaces with exact same default methods. 
+    * Extend one interface with another to avoid confusion
+***
+* Abstract classes vs interface methods
+***
 
 #### Day of the exam Tips
 * Use paper-pen to untangle complicated code or ugly code
     * Check out for any missing braces before understanding the code
     * No need to worry about different numeric system conversions
-
 ***
-
-#### Issues
-* [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
-* [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
-
+**END OF OCJA**
+***
 
 ***
 ### Introduction to debugging
@@ -451,7 +441,7 @@
     * Checkout the icons or logo for each variable to knows its type in the variables window during debug mode
         * `P` = parameters
         * `Watch`(More like glass) Icon = watches
-
+***
 ### Debugging Tips and Tricks
 * `Show execution point` - cursor jumps to the execution point
 * `Step over`
@@ -469,7 +459,7 @@
 * `Field watch points` - whenever the value is changed, the application suspends
     * Use `ALT+left click` to set up field watch point.
 * `Smart step into` - gives us options to choose the method to step into
-
+***
 ### Debugging challenge
 * Run the source code for this branch and observe the execution fails
 * Use debugger to examine where it went wrong
@@ -517,6 +507,41 @@
     * Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
 ***
+### Generics
+* since 1.5
+* Before generics, class case exception was a major run-time nightmare for many
+***
+* Generics can be applied to class, methods and interfaces
+***
+* Comparable interface
+    * Restricting to compare two classes with the same type parameters
+    * Comparing Football Team with Football Team not with Baseball Team
+    * Logic is implemented by overriding compareTo() abstract method  
+    * Collections.sort() depends on this method
+***
+* Challenge
+`        // Create a generic class to implement a league table for a sport.
+         // The class should allow teams to be added to the list, and store
+         // a list of teams that belong to the league.
+         //
+         // Your class should have a method to print out the teams in order,
+         // with the team at the top of the league printed first.
+         //
+         // Only teams of the same type should be added to any particular
+         // instance of the league class - the program should fail to compile
+         // if an attempt is made to add an incompatible team.`
+ 
+
+***
+### IntelliJ Tips
+* Auto format in IntelliJ - `Ctrl + Alt + L`
+* Auto import `Ctrl + Alt + O` 
+* Using "structure" in the intellij to understand hierarchy and visibility of the classes. 
+* Use "messages" to check for any warnings and always aim to write a "good" code by making sure a green tick is shown at the top right of the screen
+***
+### Issues
+* [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
+* [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
 
 ### Thanks and Credits
 * Inspired and learned these information from [Tim Buchalka](https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview)
