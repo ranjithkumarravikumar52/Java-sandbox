@@ -37,4 +37,14 @@ public class Team {
     public void setNumberOfGamesLost(int numberOfGameLost) {
         this.numberOfGamesLost = numberOfGameLost;
     }
+
+    public void teamWon(){
+        numberOfGamesPlayed++;
+        numberOfGamesWon++;
+    }
+
+    public void teamLost(){
+        numberOfGamesPlayed++;
+        numberOfGamesLost++;
+    }
 }

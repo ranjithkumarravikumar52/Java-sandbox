@@ -52,5 +52,6 @@ public class LeagueTableTest {
         assertFalse(leagueTable.addTeamToTheLeague(null));
     }
 
+    //adding duplicate team? HUH? Did ya think about it?
 
 }
