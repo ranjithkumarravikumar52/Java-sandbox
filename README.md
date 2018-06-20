@@ -519,8 +519,14 @@
     * Logic is implemented by overriding compareTo() abstract method  
     * Collections.sort() depends on this method
 ***
+* Be careful of using raw types in your code, which will give you a warning of "unchecked warning"
+    * Resolve that warning using Generics
+* There's a much better java doc by oracle which does a great job explaining these concepts
+    * ["Basic Generics"](https://docs.oracle.com/javase/tutorial/java/generics/why.html)
+    * ["Advanced Generics"](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
+***
 * Challenge
-`        // Create a generic class to implement a league table for a sport.
+* `      // Create a generic class to implement a league table for a sport.
          // The class should allow teams to be added to the list, and store
          // a list of teams that belong to the league.
          //
@@ -530,7 +536,6 @@
          // Only teams of the same type should be added to any particular
          // instance of the league class - the program should fail to compile
          // if an attempt is made to add an incompatible team.`
- 
 
 ***
 ### IntelliJ Tips
