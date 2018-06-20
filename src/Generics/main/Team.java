@@ -1,6 +1,6 @@
 package Generics.main;
 
-public class Team {
+public class Team implements Comparable<Team> {
     private String teamName;
     private int numberOfGamesPlayed;
     private int numberOfGamesWon;
@@ -18,33 +18,48 @@ public class Team {
         return numberOfGamesPlayed;
     }
 
-    public void setNumberOfGamesPlayed(int numberOfGamesPlayed) {
-        this.numberOfGamesPlayed = numberOfGamesPlayed;
-    }
-
     public int getNumberOfGamesWon() {
         return numberOfGamesWon;
     }
 
-    public void setNumberOfGamesWon(int numberOfGamesWon) {
-        this.numberOfGamesWon = numberOfGamesWon;
-    }
 
     public int getNumberOfGamesLost() {
         return numberOfGamesLost;
     }
 
-    public void setNumberOfGamesLost(int numberOfGameLost) {
-        this.numberOfGamesLost = numberOfGameLost;
-    }
 
-    public void teamWon(){
+    public void teamWon() {
+//        System.out.println("Before incrementing variables in TeamWon: "+this);
         numberOfGamesPlayed++;
         numberOfGamesWon++;
+//        System.out.println("After incrementing variables in TeamWon: "+this);
     }
 
-    public void teamLost(){
+    public void teamLost() {
+//        System.out.println("Before incrementing variables in TeamLost: "+this);
         numberOfGamesPlayed++;
         numberOfGamesLost++;
+//        System.out.println("After incrementing variables in TeamLost: "+this);
+    }
+
+    @Override
+    public int compareTo(Team o) {
+        if (this.numberOfGamesWon > o.numberOfGamesWon) {
+            return 1;
+        } else if (this.numberOfGamesWon < o.numberOfGamesWon) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "teamName='" + teamName + '\'' +
+                ", numberOfGamesPlayed=" + numberOfGamesPlayed +
+                ", numberOfGamesWon=" + numberOfGamesWon +
+                ", numberOfGamesLost=" + numberOfGamesLost +
+                '}';
     }
 }

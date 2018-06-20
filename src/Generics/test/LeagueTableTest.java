@@ -44,7 +44,7 @@ public class LeagueTableTest {
     @Test
     public void addEmptyTeamToTheLeague() {
         Team brokenTeam = new Team("");
-        assertFalse(leagueTable.addTeamToTheLeague(brokenTeam));
+        assertFalse("Team name can't be empty",leagueTable.addTeamToTheLeague(brokenTeam));
     }
 
     @Test
@@ -53,5 +53,11 @@ public class LeagueTableTest {
     }
 
     //adding duplicate team? HUH? Did ya think about it?
+
+    @Test
+    public void addDuplicateTeamToTheLeague(){
+        leagueTable.addTeamToTheLeague(new Team("arsenal"));
+        assertFalse("Cant add duplicate team", leagueTable.addTeamToTheLeague(new Team("arsenal")));
+    }
 
 }
