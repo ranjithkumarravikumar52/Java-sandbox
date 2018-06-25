@@ -538,6 +538,14 @@
          // if an attempt is made to add an incompatible team.`
 
 ***
+### Collections
+* The main component for collection framework is interfaces 
+* There is a interface hierarchy in collection framework
+* Aggregate operations 
+* Algorithms 
+* All the main operations will be practiced using a sample project called "Seat Reservation System"
+
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
