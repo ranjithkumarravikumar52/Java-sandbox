@@ -17,4 +17,29 @@ public class Theatre {
             }
         }
     }
+
+    public List<Seat> getSeats() {
+        return seats;
+    }
+
+    public boolean reserveSeat(String seatNumber) {
+        Seat requestedSeat = searchSeat(seatNumber);
+        if (requestedSeat == null) {
+            System.out.println("seat " + seatNumber + " not found!");
+            return false;
+        }
+        return requestedSeat.reserve();
+
+    }
+
+    private Seat searchSeat(String seatNumber) {
+        Seat requestedSeat = null;
+        for (Seat seatIndex : seats) {
+            if (seatIndex.getSeatNumber().equals(seatNumber)) {
+                requestedSeat = seatIndex;
+                break;
+            }
+        }
+        return requestedSeat;
+    }
 }
