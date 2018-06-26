@@ -565,6 +565,8 @@
     * HashMap
     * TreeMap
     * LinkedHashMap
+* Questions to practice
+    * [Link](https://docs.oracle.com/javase/tutorial/collections/interfaces/QandE/questions.html)
 ***
 * Aggregate operations 
 * Algorithms 
