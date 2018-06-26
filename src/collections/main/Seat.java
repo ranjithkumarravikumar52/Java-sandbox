@@ -1,6 +1,6 @@
 package collections.main;
 
-public class Seat {
+public class Seat{
 
     private String seatNumber;
     private boolean reserved;
@@ -35,6 +35,8 @@ public class Seat {
         return false;
     }
 
+
+
     @Override
     public String toString() {
         return "Seat{" +
@@ -42,4 +44,6 @@ public class Seat {
                 ", reserved=" + reserved +
                 '}';
     }
+
+
 }

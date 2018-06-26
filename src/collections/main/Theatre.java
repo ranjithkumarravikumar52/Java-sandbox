@@ -1,14 +1,24 @@
 package collections.main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
+/**
+ * When the following Concrete classes are used, it assigns values based on the underlying data structure
+ * <ul>
+ * <li>HashSet - unordered</li>
+ * <li>LinkedHashSet - ordered</li>
+ * <li>ArrayList - ordered</li>
+ * <li>LinkedList - ordered</li>
+ * <li>ArrayDeque - ordered</li>
+ * </ul>
+ */
 public class Theatre {
     private final String theatreName;
-    private Collection<Seat> seats = new LinkedHashSet<>();
+    private Collection<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
-
         initSeatsInTheatre(numRows, seatsPerRow);
     }
 
@@ -44,11 +54,12 @@ public class Theatre {
             }
         }
         return requestedSeat;
+
     }
 
-   public void displaySeats(){
-        for(Seat seatIndex: seats){
+    public void displaySeats() {
+        for (Seat seatIndex : seats) {
             System.out.println(seatIndex);
         }
-   }
+    }
 }
