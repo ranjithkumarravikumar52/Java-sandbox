@@ -549,10 +549,16 @@
     * Map
         * SortedMap
 * There is a interface hierarchy in collection framework
+* Set
+    * HashSet
+    * TreeSet
+    * LinkedHashSet
+
+***
 * Aggregate operations 
 * Algorithms 
 * All the main operations will be practiced using a sample project called "Seat Reservation System"
-* [Doc Link](https://docs.oracle.com/javase/tutorial/collections/intro/index.html)
+* [Doc Link](https://docs.oracle.com/javase/tutorial/collections/intro/index.html) 
 
 ***
 ### IntelliJ Tips
