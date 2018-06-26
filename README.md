@@ -558,7 +558,13 @@
     * LinkedList
 * Queue
     * LinkedList
-* 
+* Deque
+    * LinkedList
+    * ArrayDeque
+* Map 
+    * HashMap
+    * TreeMap
+    * LinkedHashMap
 ***
 * Aggregate operations 
 * Algorithms 
