@@ -2,6 +2,7 @@ package collections.main;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.TreeSet;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -11,11 +12,12 @@ import java.util.Collection;
  * <li>ArrayList - ordered</li>
  * <li>LinkedList - ordered</li>
  * <li>ArrayDeque - ordered</li>
+ * <li>TreeSet - ordered; error if Comparable interface is not implemented</li>
  * </ul>
  */
 public class Theatre {
     private final String theatreName;
-    private Collection<Seat> seats = new ArrayList<>();
+    private Collection<Seat> seats = new TreeSet<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
