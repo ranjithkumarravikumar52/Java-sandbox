@@ -556,6 +556,9 @@
 * List
     * ArrayList
     * LinkedList
+* Queue
+    * LinkedList
+* 
 ***
 * Aggregate operations 
 * Algorithms 
