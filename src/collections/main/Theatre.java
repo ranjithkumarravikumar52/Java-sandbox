@@ -2,7 +2,8 @@ package collections.main;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.TreeSet;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -17,7 +18,7 @@ import java.util.TreeSet;
  */
 public class Theatre {
     private final String theatreName;
-    private Collection<Seat> seats = new TreeSet<>();
+    private List<Seat> seats = new ArrayList<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -47,16 +48,21 @@ public class Theatre {
 
     }
 
+    /**
+     * <p>This method is used to practice implementing any search algorithms to get our requested in shortest amount of time</p>
+     * <p>In addition, how a search algorithm works for different underlying data structure</p>
+     *
+     * @param seatNumber
+     * @return
+     */
     private Seat searchSeat(String seatNumber) {
-        Seat requestedSeat = null;
-        for (Seat seatIndex : seats) {
-            if (seatIndex.getSeatNumber().equals(seatNumber)) {
-                requestedSeat = seatIndex;
-                break;
-            }
+        Seat requestedSeat = new Seat(seatNumber);
+        int result = Collections.binarySearch(seats, requestedSeat);
+        if (result >= 0) {
+            return seats.get(result);
+        } else {
+            return null;
         }
-        return requestedSeat;
-
     }
 
     public void displaySeats() {
