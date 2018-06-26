@@ -539,11 +539,20 @@
 
 ***
 ### Collections
-* The main component for collection framework is interfaces 
+* The main component for collection framework is [interfaces](https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html) 
+    * Collection
+    * Set
+        * SortedSet
+    * List
+    * Queue
+    * Deque
+    * Map
+        * SortedMap
 * There is a interface hierarchy in collection framework
 * Aggregate operations 
 * Algorithms 
 * All the main operations will be practiced using a sample project called "Seat Reservation System"
+* [Doc Link](https://docs.oracle.com/javase/tutorial/collections/intro/index.html)
 
 ***
 ### IntelliJ Tips

@@ -1,15 +1,18 @@
 package collections.main;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Theatre {
     private final String theatreName;
-    private List<Seat> seats = new ArrayList<>();
+    private Collection<Seat> seats = new LinkedHashSet<>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
 
+        initSeatsInTheatre(numRows, seatsPerRow);
+    }
+
+    private void initSeatsInTheatre(int numRows, int seatsPerRow) {
         for (char row = 'A'; row < 'A' + numRows; row++) {
             for (int seatNum = 1; seatNum <= seatsPerRow; seatNum++) {
                 Seat seat = new Seat(row + String.format("%02d", seatNum));
@@ -18,7 +21,7 @@ public class Theatre {
         }
     }
 
-    public List<Seat> getSeats() {
+    public Collection<Seat> getSeats() {
         return seats;
     }
 
@@ -42,4 +45,10 @@ public class Theatre {
         }
         return requestedSeat;
     }
+
+   public void displaySeats(){
+        for(Seat seatIndex: seats){
+            System.out.println(seatIndex);
+        }
+   }
 }
