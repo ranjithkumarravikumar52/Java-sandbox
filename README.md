@@ -538,6 +538,47 @@
          // if an attempt is made to add an incompatible team.`
 
 ***
+### Collections
+* The main component for collection framework is [interfaces](https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html) 
+    * Collection
+    * Set
+        * SortedSet
+    * List
+    * Queue
+    * Deque
+    * Map
+        * SortedMap
+* There is a interface hierarchy in collection framework
+* Set
+    * HashSet
+    * TreeSet
+    * LinkedHashSet
+* List
+    * ArrayList
+    * LinkedList
+* Queue
+    * LinkedList
+* Deque
+    * LinkedList
+    * ArrayDeque
+* Map 
+    * HashMap
+    * TreeMap
+    * LinkedHashMap
+* Questions to practice
+    * [Link](https://docs.oracle.com/javase/tutorial/collections/interfaces/QandE/questions.html)
+***
+* Aggregate operations 
+* Algorithms 
+* All the main operations will be practiced using a sample project called "Seat Reservation System"
+* [Doc Link](https://docs.oracle.com/javase/tutorial/collections/intro/index.html) 
+***
+* Important Notes
+    * Two List objects are equal if they contain the same elements in the same order.
+    * Collections.BinarySearch needs the list to be sorted first
+    * Collections.min or max doesn't need the list to be sorted first
+
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
