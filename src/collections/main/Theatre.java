@@ -68,7 +68,7 @@ public class Theatre {
 
     public void displaySeats() {
         for (Seat seatIndex : seats) {
-            System.out.print(seatIndex.getSeatNumber()+" ");
+            System.out.println(seatIndex+" ");
         }
         System.out.println();
     }

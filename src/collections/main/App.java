@@ -1,6 +1,7 @@
 package collections.main;
 
-import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -22,11 +23,22 @@ public class App {
 //        Collections.reverse(theatre.getSeats());
 //        theatre.displaySeats();
 //
-//        System.out.println("Min value(by seatname) " +Collections.min(theatre.getSeats()).getSeatNumber());
-//        System.out.println("Max value(by seatname) " +Collections.max(theatre.getSeats()).getSeatNumber());
+//        System.out.println("Min value(by seat name) " +Collections.min(theatre.getSeats()).getSeatNumber());
+//        System.out.println("Max value(by seat name) " +Collections.max(theatre.getSeats()).getSeatNumber());
+//
+//        System.out.println();
+//        Collections.swap(theatre.getSeats(), 0, theatre.getSeats().size() - 1);
+//        theatre.displaySeats();
 
+        List<Seat> newList = new LinkedList<>(theatre.getSeats());
+//        Collections.copy(newList, theatre.getSeats());
+
+        newList.get(0).reserve();
+
+        for(Seat s: newList){
+            System.out.println(s+" ");
+        }
         System.out.println();
-        Collections.swap(theatre.getSeats(), 0, theatre.getSeats().size() - 1);
         theatre.displaySeats();
 
     }
