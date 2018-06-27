@@ -1,9 +1,6 @@
 package collections.main;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -34,8 +31,12 @@ public class Theatre {
         }
     }
 
-    public Collection<Seat> getSeats() {
+    public List<Seat> getSeats() {
         return seats;
+    }
+
+    public void setSeats(List<Seat> seats) {
+        this.seats = seats;
     }
 
     public boolean reserveSeat(String seatNumber) {
@@ -67,7 +68,8 @@ public class Theatre {
 
     public void displaySeats() {
         for (Seat seatIndex : seats) {
-            System.out.println(seatIndex);
+            System.out.print(seatIndex.getSeatNumber()+" ");
         }
+        System.out.println();
     }
 }
