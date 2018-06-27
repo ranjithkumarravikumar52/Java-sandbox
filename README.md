@@ -575,6 +575,8 @@
 ***
 * Important Notes
     * Two List objects are equal if they contain the same elements in the same order.
+    * Collections.BinarySearch needs the list to be sorted first
+    * Collections.min or max doesn't need the list to be sorted first
 
 ***
 ### IntelliJ Tips

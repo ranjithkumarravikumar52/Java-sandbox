@@ -22,5 +22,8 @@ public class App {
         Collections.reverse(theatre.getSeats());
         theatre.displaySeats();
 
+        System.out.println("Min value(by seatname) " +Collections.min(theatre.getSeats()).getSeatNumber());
+        System.out.println("Max value(by seatname) " +Collections.max(theatre.getSeats()).getSeatNumber());
+
     }
 }
