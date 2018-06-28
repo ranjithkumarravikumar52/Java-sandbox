@@ -9,20 +9,30 @@ public class App {
 
     public static void main(String[] args) {
 
-        class ClickListener implements Button.OnClickListener {
+//        /**
+//         * Local Class example
+//         */
+//        class ClickListener implements Button.OnClickListener {
+//
+//            public ClickListener() {
+//                System.out.println("I've been attached");
+//            }
+//
+//            @Override
+//            public void onClick(String title) {
+//                System.out.println(title + " was clicked!");
+//            }
+//        }
+//        button.setOnClickListener(new ClickListener());
 
-            public ClickListener() {
-                System.out.println("I've been attached");
-            }
-
+        button.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(String title) {
-                System.out.println(title + " was clicked!");
+                System.out.println(title + "was clicked");
             }
-        }
-
-        button.setOnClickListener(new ClickListener());
+        });
         listen();
+
 
     }
 
