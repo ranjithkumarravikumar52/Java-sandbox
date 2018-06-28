@@ -9,9 +9,6 @@ public class App {
 //        System.out.println(firstGear.driveSpeed(1000));
 //
 ////        Gearbox.Gear secondGear = new Gearbox.Gear(.1, 12.3); //not an enclosing class error
-        mcLaren.addGear(1, 5.3);
-        mcLaren.addGear(2, 10.6);
-        mcLaren.addGear(3, 15.9);
         mcLaren.operateClutch(true);
         mcLaren.changeGear(1);
         System.out.println(mcLaren.wheelSpeed(1000));
