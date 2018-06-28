@@ -579,6 +579,18 @@
     * Collections.min or max doesn't need the list to be sorted first
 
 ***
+### Inner Classes
+* [Doc for Inner Class](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
+* Why do we need inner class? 
+    * It is a way of logically grouping classes that are only used in one place
+    * It increases encapsulation:
+    * It can lead to more readable and maintainable code
+***
+* Notes
+    * Non-static inner class are used when the inner class has no purpose without the outer class
+    * Shadowing variables
+
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
