@@ -585,11 +585,19 @@
     * It is a way of logically grouping classes that are only used in one place
     * It increases encapsulation:
     * It can lead to more readable and maintainable code
+***
+### Local Classes
 * Can we declare interfaces inside a local class? 
     * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
 * Can we declare static methods inside a local class? 
     * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
 * The only static type allowed inside a local class is of the type static variable which are constants or final or compile time constant expressions
+***
+### Anonymous class
+* Anonymous classes enable you to make your code more concise. They enable you to declare and instantiate a class at the same time. 
+* They are like local classes except that they do not have a name. Use them if you need to use a local class only once. [Link](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)
+* Can we declare constructors inside an anonymous class? 
+    * NO!
 ***
 * Notes
     * Non-static inner class are used when the inner class has no purpose without the outer class
