@@ -579,6 +579,37 @@
     * Collections.min or max doesn't need the list to be sorted first
 
 ***
+### Inner Classes
+* [Doc for Inner Class](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
+* Why do we need inner class? 
+    * It is a way of logically grouping classes that are only used in one place
+    * It increases encapsulation:
+    * It can lead to more readable and maintainable code
+***
+### Local Classes
+* Can we declare interfaces inside a local class? 
+    * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* Can we declare static methods inside a local class? 
+    * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* The only static type allowed inside a local class is of the type static variable which are constants or final or compile time constant expressions
+***
+### Anonymous class
+* Anonymous classes enable you to make your code more concise. They enable you to declare and instantiate a class at the same time. 
+* They are like local classes except that they do not have a name. Use them if you need to use a local class only once. [Link](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)
+* Can we declare constructors inside an anonymous class? 
+    * NO!
+***
+### Lambda expressions
+* One issue with anonymous classes is that if the implementation of your anonymous class is very simple, such as an interface that contains only one method, then the syntax of anonymous classes may seem unwieldy and unclear. In these cases, you're usually trying to pass functionality as an argument to another method, such as what action should be taken when someone clicks a button. Lambda expressions enable you to do this, to treat functionality as method argument, or code as data. 
+* The previous section, Anonymous Classes, shows you how to implement a base class without giving it a name. Although this is often more concise than a named class, for classes with only one method, even an anonymous class seems a bit excessive and cumbersome. Lambda expressions let you express instances of single-method classes more compactly.
+***
+* Notes
+    * Non-static inner class are used when the inner class has no purpose without the outer class
+    * Shadowing variables
+    * Non-static variable cannot be accessed from a static context
+    * 
+
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
