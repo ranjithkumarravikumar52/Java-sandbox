@@ -623,7 +623,9 @@
                //2. arrow token
                //3. sout statement in the body`
     * `new Thread(() -> System.out.println("Printing this using lambda")).start();`
-        * We don't need a semicolon inside the lambda expression when the body includes only statement
+        * We don't need a semicolon inside the lambda expression when the body includes only statement and in fact we can't use either
+    * When checking for a method can be used by lambda expression check the documentation of that method for the annotation
+        * @FunctionalInterface
     
 ***
 ### IntelliJ Tips
