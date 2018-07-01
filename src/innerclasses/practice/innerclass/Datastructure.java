@@ -1,4 +1,4 @@
-package innerclasses.practice;
+package innerclasses.practice.innerclass;
 
 import java.util.Iterator;
 
