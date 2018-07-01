@@ -585,10 +585,17 @@
     * It is a way of logically grouping classes that are only used in one place
     * It increases encapsulation:
     * It can lead to more readable and maintainable code
+* Can we declare interfaces inside a local class? 
+    * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* Can we declare static methods inside a local class? 
+    * [NO!](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* The only static type allowed inside a local class is of the type static variable which are constants or final or compile time constant expressions
 ***
 * Notes
     * Non-static inner class are used when the inner class has no purpose without the outer class
     * Shadowing variables
+    * Non-static variable cannot be accessed from a static context
+    * 
 
 ***
 ### IntelliJ Tips

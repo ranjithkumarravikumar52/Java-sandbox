@@ -8,23 +8,39 @@ public class LocalClassExample {
             String phoneNumber1, String phoneNumber2) {
 
         final int numberLength = 10;
+        int exampleInt;
 
         class PhoneNumber {
 
             String formattedPhoneNumber = null;
 
+            //inner class cannot have static declarations
+//            static final int intExample;
+
             PhoneNumber(String phoneNumber) {
-                // numberLength = 7;
-                String currentNumber = phoneNumber.replaceAll(
-                        regularExpression, "");
+
+                //local class can access outer class member variable regularExpression
+                String currentNumber = phoneNumber.replaceAll(regularExpression, "");
+
+                //a local class can access local variables which are final only - numberLength
                 if (currentNumber.length() == numberLength)
                     formattedPhoneNumber = currentNumber;
                 else
                     formattedPhoneNumber = null;
+
+                //accessing local variable which is not final
+                //exampleInt = 11; //compile error
             }
 
             public String getNumber() {
                 return formattedPhoneNumber;
+            }
+
+            //local class can access it's enclosing method's parameters without any issues
+            //The method printOriginalNumbers accesses the parameters phoneNumber1 and phoneNumber2 of the method validatePhoneNumber.
+            public void printOriginalNumbers() {
+                System.out.println("Original numbers are " + phoneNumber1 +
+                        " and " + phoneNumber2);
             }
 
         }
