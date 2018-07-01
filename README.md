@@ -599,16 +599,32 @@
 * Can we declare constructors inside an anonymous class? 
     * NO!
 ***
-### Lambda expressions
-* One issue with anonymous classes is that if the implementation of your anonymous class is very simple, such as an interface that contains only one method, then the syntax of anonymous classes may seem unwieldy and unclear. In these cases, you're usually trying to pass functionality as an argument to another method, such as what action should be taken when someone clicks a button. Lambda expressions enable you to do this, to treat functionality as method argument, or code as data. 
-* The previous section, Anonymous Classes, shows you how to implement a base class without giving it a name. Although this is often more concise than a named class, for classes with only one method, even an anonymous class seems a bit excessive and cumbersome. Lambda expressions let you express instances of single-method classes more compactly.
-***
 * Notes
     * Non-static inner class are used when the inner class has no purpose without the outer class
     * Shadowing variables
     * Non-static variable cannot be accessed from a static context
-    * 
-
+***
+### Lambda expressions
+* One issue with anonymous classes is that if the implementation of your anonymous class is very simple, such as an interface that contains only one method, then the syntax of anonymous classes may seem unwieldy and unclear. 
+* In these cases, you're usually trying to pass functionality as an argument to another method, such as what action should be taken when someone clicks a button. 
+* Lambda expressions enable you to do this, to treat functionality as method argument, or code as data. 
+* The previous section, Anonymous Classes, shows you how to implement a base class without giving it a name. 
+* Although this is often more concise than a named class, for classes with only one method, even an anonymous class seems a bit excessive and cumbersome. 
+* Lambda expressions let you express instances of single-method classes more compactly.
+***
+* Notes
+    * Interfaces with only one abstract method are also functional interfaces
+    * Every lambda expression contains three parts
+        * arg list
+        * arrow token
+        * body
+    * `//() -> System.out.println("Printing this using lambda")
+               //1. empty arg list
+               //2. arrow token
+               //3. sout statement in the body`
+    * `new Thread(() -> System.out.println("Printing this using lambda")).start();`
+        * We don't need a semicolon inside the lambda expression when the body includes only statement
+    
 ***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
