@@ -623,7 +623,10 @@
                //2. arrow token
                //3. sout statement in the body`
     * `new Thread(() -> System.out.println("Printing this using lambda")).start();`
-        * We don't need a semicolon inside the lambda expression when the body includes only statement and in fact we can't use either
+        * We don't need a semicolon inside the lambda expression when the body includes only one statement and in fact we can't use it either
+        * When we use curly brace for the body, don't forget to write 'return' statement
+        * When parameter type is mentioned, it should always be enclosed in parenthesis
+        * Cannot define a new variable inside the body which has been used by the argument type
     * When checking for a method can be used by lambda expression check the documentation of that method for the annotation
         * @FunctionalInterface
     
