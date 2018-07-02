@@ -2,6 +2,7 @@ package dateandtime;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class App {
 
@@ -13,9 +14,15 @@ public class App {
         LocalDateTime localDateTime = LocalDateTime.of(date, localTime);
 
         //format type
-        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE));
-        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_TIME));
+//        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+//        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE));
+//        System.out.println(localDateTime.format(DateTimeFormatter.ISO_LOCAL_TIME));
+
+        //format length
+//        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL).format(localDateTime));
+//        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG).format(localDateTime));
+        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).format(localDateTime));
+        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(localDateTime));
     }
 
     private static void periods() {
