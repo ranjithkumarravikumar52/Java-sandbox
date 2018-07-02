@@ -23,6 +23,10 @@ public class App {
 //        System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG).format(localDateTime));
         System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).format(localDateTime));
         System.out.println(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(localDateTime));
+
+        //custom format
+        DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("dd MM YYYY, hh:mm:ss a");
+        System.out.println(customFormatter.format(localDateTime));
     }
 
     private static void periods() {
