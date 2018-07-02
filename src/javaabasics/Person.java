@@ -1,6 +1,4 @@
-package javabasicclassstructure;
-
-import java.util.Date;
+package javaabasics;
 
 public class Person {
 
