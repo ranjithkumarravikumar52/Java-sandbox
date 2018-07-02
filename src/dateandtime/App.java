@@ -27,6 +27,14 @@ public class App {
         //custom format
         DateTimeFormatter customFormatter = DateTimeFormatter.ofPattern("dd MM YYYY, hh:mm:ss a");
         System.out.println(customFormatter.format(localDateTime));
+
+        //parse date of the type String
+        String userInputDate = "1992/08/04";
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("YYYY MM dd");
+        userInputDate = userInputDate.replaceAll("[/]", " ");
+
+        LocalDate date1 = LocalDate.parse(userInputDate, customFormatter);
+        System.out.println(date1);
     }
 
     private static void periods() {
