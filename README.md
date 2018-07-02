@@ -627,9 +627,13 @@
         * When we use curly brace for the body, don't forget to write 'return' statement
         * When parameter type is mentioned, it should always be enclosed in parenthesis
         * Cannot define a new variable inside the body which has been used by the argument type
+        * Cannot define a new variable inside the body which has been used by the argument type
     * When checking for a method can be used by lambda expression check the documentation of that method for the annotation
         * @FunctionalInterface
-    
+***
+### Data and time (Java 8)
+* [Doc](https://docs.oracle.com/javase/tutorial/datetime/)
+* 
 ***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
