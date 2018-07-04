@@ -6,11 +6,147 @@ public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
 
-//        setInterfaceOperations(theatre);
+    }
+
+    private static void listInterfaceMethods(Theatre theatre) {
+        /**
+         * A List is an ordered Collection (sometimes called a sequence). Lists may contain duplicate elements. In addition to the operations inherited from Collection, the List interface includes operations for the following:
+         *
+         * Positional access — manipulates elements based on their numerical position in the list. This includes methods such as
+         * get,
+         * set,
+         * add,
+         * addAll, and
+         * remove.
+         *
+         * Search — searches for a specified object in the list and returns its numerical position. Search methods include
+         * indexOf and
+         * lastIndexOf.
+         *
+         * Iteration — extends Iterator semantics to take advantage of the list's sequential nature.
+         * The listIterator methods provide this behavior.
+         *
+         * Range-view — The sublist method performs arbitrary range operations on the list.
+         */
+        List<Seat> seatList = new ArrayList<>(theatre.getSeats());
+//        List<Seat> seatList1 = new LinkedList<>(theatre.getSeats());
+//        Seat t1 = new Seat("T1");
+
+        //get
+//        int index = seatList.size() - 3;
+//        System.out.println(seatList.get(index).getSeatNumber());
 
 
+        //set
 
+//        System.out.println(seatList.set(index, t1));
+//        System.out.println(seatList.get(index).getSeatNumber());
 
+        //add
+//        displaySeats(seatList);
+//        seatList.add(3,t1);
+//        displaySeats(seatList);
+//        seatList.addAll(seatList);
+//        displaySeats(seatList);
+//
+//        seatList.addAll(2, seatList);
+//        displaySeats(seatList);
+//        seatList.removeAll(seatList1);
+//        displaySeats(seatList1);
+
+        //search
+//        seatList.add(t1);
+//        seatList.add(t1);
+//        seatList.add(t1);
+//        displaySeats(seatList);
+//        System.out.println(seatList.indexOf(t1));
+//        System.out.println(seatList.lastIndexOf(t1));
+
+        //ListIterator
+//        displaySeats(seatList);
+//        ListIterator<Seat> seatListIterator = seatList.listIterator(seatList.size());
+//        while(seatListIterator.hasPrevious()){
+//            System.out.print(seatListIterator.previous().getSeatNumber()+" ");
+//        }
+
+        //Rangeview - immutable I guess?
+//        displaySeats(seatList);
+//
+//        List<Seat> subList = seatList.subList(0,3);
+//        displaySeats(subList);
+//        List<Seat> reverseList = new LinkedList<>();
+//        ListIterator<Seat> seatListIterator = seatList.listIterator(seatList.size());
+//        while (seatListIterator.hasPrevious()) {
+//            reverseList.add(seatListIterator.previous());
+//        }
+//
+//        seatList.clear();
+//        seatListIterator = reverseList.listIterator();
+//        while (seatListIterator.hasNext()) {
+//            seatList.add(seatListIterator.next());
+//        }
+//        displaySeats(seatList);
+//        displaySeats(reverseList);
+//
+//        //equal only if both list contains same elements in same order
+//        System.out.println(seatList.equals(reverseList));
+
+        /**
+         * List Algorithms
+         * Most polymorphic algorithms in the Collections class apply specifically to List. Having all these algorithms at your disposal makes it very easy to manipulate lists. Here's a summary of these algorithms, which are described in more detail in the Algorithms section.
+         *
+         * sort — sorts a List using a merge sort algorithm, which provides a fast, stable sort. (A stable sort is one that does not reorder equal elements.)
+         *
+         * shuffle — randomly permutes the elements in a List.
+         *
+         * reverse — reverses the order of the elements in a List.
+         * rotate — rotates all the elements in a List by a specified distance.
+         * swap — swaps the elements at specified positions in a List.
+         * replaceAll — replaces all occurrences of one specified value with another.
+         * fill — overwrites every element in a List with the specified value.
+         * copy — copies the source List into the destination List.
+         * binarySearch — searches for an element in an ordered List using the binary search algorithm.
+         * indexOfSubList — returns the index of the first sublist of one List that is equal to another.
+         * lastIndexOfSubList — returns the index of the last sublist of one List that is equal to another.
+         */
+
+//        seatList.sort(Seat::compareTo);
+//        displaySeats(seatList);
+//
+////        Collections.shuffle(seatList);
+////        displaySeats(seatList);
+//
+////        Collections.reverse(seatList);
+////        displaySeats(seatList);
+//
+//        Collections.rotate(seatList, 0);
+//        displaySeats(seatList);
+//
+//        Collections.swap(seatList, 0, 1);
+//        displaySeats(seatList);
+//
+//        //replaceAll
+//        seatList.addAll(seatList);
+//        displaySeats(seatList);
+//        Collections.replaceAll(seatList, seatList.get(0), seatList.get(seatList.size()-1));
+//        displaySeats(seatList);
+//
+//        //fill
+//        Seat t1 = new Seat("T1");
+//        Collections.fill(seatList, t1);
+//        displaySeats(seatList);
+//
+//        //copy
+////        List<Seat> destList = new ArrayList<>(seatList.addAll(seatList));
+////        Collections.copy(destList, seatList);
+////        displaySeats(destList);
+
+//        displaySeats(seatList);
+//        seatList.addAll(seatList);
+//
+//        List<Seat> seatList1 = new ArrayList<>(seatList);
+//        seatList1.addAll(seatList);
+//        System.out.println(Collections.indexOfSubList(seatList, seatList1));
     }
 
     private static void setInterfaceOperations(Theatre theatre) {
