@@ -5,9 +5,46 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
-        dequeInterfaceOperations(theatre);
 
+    }
 
+    private static void mapInterfaceOperations(Theatre theatre) {
+        //Implementations
+        Map<Integer, Seat> integerSeatMap = new TreeMap<Integer, Seat>();
+        List<Seat> seatList = new ArrayList<>(theatre.getSeats());
+
+        //putting elements into the map
+        Iterator<Seat> seatIterator = seatList.iterator();
+        int i = 0;
+        while(seatIterator.hasNext()){
+            integerSeatMap.put(i++, seatIterator.next());
+        }
+
+        //printing all the elements
+        for(i = 0; i < integerSeatMap.size(); i++){
+            System.out.print(integerSeatMap.get(i).getSeatNumber()+" ");
+        }
+        System.out.println();
+
+        //set of all the keys in the map
+        Set<Integer> integers = integerSeatMap.keySet();
+        for(int j: integers){
+            System.out.print(j+" ");
+        }
+        System.out.println();
+
+        //collection of all values in the map
+        Collection<Seat> seatCollection = integerSeatMap.values() ;
+        displaySeats(seatCollection);
+
+        //entrySet - set of key,value pairs in the map
+        Set<Map.Entry<Integer, Seat>> keyValuePairsSet = integerSeatMap.entrySet();
+        Iterator<Map.Entry<Integer, Seat>> entryIterator = keyValuePairsSet.iterator();
+        System.out.println("Key-value pairs...");
+        while(entryIterator.hasNext()){
+            System.out.println(entryIterator.next()+" ");
+        }
+        System.out.println();
     }
 
     private static void dequeInterfaceOperations(Theatre theatre) {
