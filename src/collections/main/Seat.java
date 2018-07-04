@@ -1,5 +1,7 @@
 package collections.main;
 
+import java.util.Objects;
+
 public class Seat implements Comparable<Seat> {
 
     private String seatNumber;
@@ -49,4 +51,5 @@ public class Seat implements Comparable<Seat> {
     public int compareTo(Seat o) {
         return this.seatNumber.compareToIgnoreCase(o.getSeatNumber());
     }
+
 }
