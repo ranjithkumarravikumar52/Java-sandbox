@@ -570,7 +570,27 @@
 ***
 #### Collections Interface
 * Conversion constructor returns a copy of the collection with a newly created instance variable pointing to the original object. In other words, changes in the copy will affect the original 
-* 
+* The Collection interface contains methods that perform basic operations, such as 
+    * int size(),
+    * boolean isEmpty(),
+    * boolean contains(Object element),
+    * boolean add(E element),
+    * boolean remove(Object element),
+    * Iterator<E> iterator().
+    * Notice how there is no get method to retrieve a specified object
+***
+* It also contains methods that operate on entire collections,
+    * boolean containsAll(Collection<?> c),
+    * boolean addAll(Collection<? extends E> c),
+    * boolean removeAll(Collection<?> c),
+    * boolean retainAll(Collection<?> c), and
+    * void clear().
+***
+* Additional methods for array operations
+    * Object[] toArray() 
+    * <T> T[] toArray(T[] a)
+***
+
 ***
 * Aggregate operations 
 * Algorithms 
@@ -581,6 +601,7 @@
     * Two List objects are equal if they contain the same elements in the same order.
     * Collections.BinarySearch needs the list to be sorted first
     * Collections.min or max doesn't need the list to be sorted first
+    * Add method of collection is generally defined to add duplicates as well
 
 ***
 ### IntelliJ Tips

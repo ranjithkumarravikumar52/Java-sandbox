@@ -1,6 +1,7 @@
 package collections.main;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -48,17 +49,13 @@ public class Theatre {
             return false;
         }
         return requestedSeat.reserve();
-
     }
 
     /**
      * <p>This method is used to practice implementing any search algorithms to get our requested seat in shortest amount of time</p>
      * <p>In addition, to check for how a search algorithm works for different underlying data structure</p>
-     *
-     * @param seatNumber
-     * @return
      */
-    private Seat searchSeat(String seatNumber) {
+    public Seat searchSeat(String seatNumber) {
         Seat requestedSeat = new Seat(seatNumber);
         int result = Collections.binarySearch(seats, requestedSeat);
         if (result >= 0) {
