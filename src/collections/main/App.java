@@ -6,6 +6,45 @@ public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
 
+        queueInterfaceOperations(theatre);
+    }
+
+    private static void queueInterfaceOperations(Theatre theatre) {
+        Queue<Seat> seatQueue = new LinkedList<>(theatre.getSeats());
+        Seat s1 = null;
+//        displaySeats(seatQueue);
+
+        /**
+         * public interface Queue<E> extends Collection<E> {
+         *     E element();
+         *     boolean offer(E e);
+         *     E peek();
+         *     E poll();
+         *     E remove();
+         * }
+         */
+
+//        seatQueue.clear();
+//
+//        //element vs peek
+////        System.out.println(seatQueue.element().getSeatNumber());
+//        System.out.println(seatQueue.peek());
+//
+//        //remove vs poll
+////        System.out.println(seatQueue.remove());
+//        System.out.println(seatQueue.poll());
+//
+//
+//        //offer vs add
+//        System.out.println(seatQueue.add(s1));
+//        System.out.println(seatQueue.offer(s1));
+//        displaySeats(seatQueue);
+
+        //priority Queue
+        Set<Seat> seatList = new HashSet<>(theatre.getSeats());
+        displaySeats(seatList);
+        Queue<Seat> seatQueue1 = new PriorityQueue<>(seatList);
+        displaySeats(seatQueue1);
     }
 
     private static void listInterfaceMethods(Theatre theatre) {
