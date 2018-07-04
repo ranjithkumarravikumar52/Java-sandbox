@@ -590,6 +590,13 @@
     * Object[] toArray() 
     * <T> T[] toArray(T[] a)
 ***
+#### Set Interface [Link](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html)
+* The Set interface contains **only** methods inherited from Collection and adds the restriction that duplicate elements are prohibited.
+* Implemented by
+    * HashSet
+    * TreeSet
+    * LinkedHashSet
+* The Java platform contains three general-purpose Set implementations: HashSet, TreeSet, and LinkedHashSet. HashSet, which stores its elements in a hash table, is the best-performing implementation; however it makes no guarantees concerning the order of iteration. TreeSet, which stores its elements in a red-black tree, orders its elements based on their values; it is substantially slower than HashSet. LinkedHashSet, which is implemented as a hash table with a linked list running through it, orders its elements based on the order in which they were inserted into the set (insertion-order). LinkedHashSet spares its clients from the unspecified, generally chaotic ordering provided by HashSet at a cost that is only slightly higher.
 
 ***
 * Aggregate operations 

@@ -1,16 +1,94 @@
 package collections.main;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
-//        basicCollectionOperations(theatre);
 
-        traversingMethodsInCollection(theatre);
+//        setInterfaceOperations(theatre);
 
+
+
+
+    }
+
+    private static void setInterfaceOperations(Theatre theatre) {
+        Collection<Seat> setsImplementation = new ArrayList<>(theatre.getSeats());
+        ((ArrayList<Seat>) setsImplementation).addAll(setsImplementation);
+//        displaySeats(setsImplementation);
+
+        //Removing duplicates no order preference
+//        Set<Seat> noDups = new HashSet<>(setsImplementation);
+//        displaySeats(noDups);
+
+        //Removing duplicates with order preference
+//        noDups = new TreeSet<>(setsImplementation);
+//        displaySeats(noDups);
+//        noDups = new LinkedHashSet<>(setsImplementation);
+//        displaySeats(noDups);
+
+        /*
+        The size operation returns the number of elements in the Set (its cardinality).
+         The isEmpty method does exactly what you think it would.
+          The add method adds the specified element to the Set if it is not already present and returns a boolean indicating whether the element was added.
+          Similarly, the remove method removes the specified element from the Set if it is present and returns a boolean indicating whether the element was present.
+          The iterator method returns an Iterator over the Set.
+         */
+//        System.out.println("isEmpty: "+noDups.isEmpty());
+//        Seat t1 = new Seat("T1");
+//        System.out.println("adding new seat...: "+noDups.add(t1));
+//        System.out.println("Removing new seat...: "+noDups.remove(t1));
+//
+//        for(Iterator<Seat> seatIterator = noDups.iterator();seatIterator.hasNext();){
+//            System.out.print(seatIterator.next().getSeatNumber()+" ");
+//        }
+//        System.out.println();
+
+
+        /**
+         * BULK OPERATIONS
+         * containsAll
+         * addAll
+         * retainAll
+         * removeAll
+         * s1.containsAll(s2) — returns true if s2 is a subset of s1. (s2 is a subset of s1 if set s1 contains all of the elements in s2.)
+         * s1.addAll(s2) — transforms s1 into the union of s1 and s2. (The union of two sets is the set containing all of the elements contained in either set.)
+         * s1.retainAll(s2) — transforms s1 into the intersection of s1 and s2. (The intersection of two sets is the set containing only the elements common to both sets.)
+         * s1.removeAll(s2) — transforms s1 into the (asymmetric) set difference of s1 and s2. (For example, the set difference of s1 minus s2 is the set containing all of the elements found in s1 but not in s2.)
+         * */
+
+        //containsAll
+        Set<Seat> set1 = new HashSet<>(setsImplementation);
+        Collection<Seat> set2 = new ArrayList<>(setsImplementation);
+//        set2.addAll(set2);
+//        System.out.println("set1...");
+//        displaySeats(set1);
+//        System.out.println("set2...");
+//        displaySeats(set2);
+//        System.out.println(set1.containsAll(set2));
+//        System.out.println(set2.containsAll(set1));
+//        set1.clear();
+//        System.out.println("after clearing set1...");
+//        System.out.println(set1.containsAll(set2));
+//        System.out.println(set2.containsAll(set1));
+
+        //addAll
+        set1.addAll(set2);
+        displaySeats(set1);
+        displaySeats(set2);
+
+        //retainAll
+        System.out.println("retainAll...");
+        set2.retainAll(set1);
+        displaySeats(set1);
+        displaySeats(set2);
+
+        //removeAll
+        System.out.println("removeAll...");
+        set1.removeAll(set2);
+        displaySeats(set1);
+        displaySeats(set2);
     }
 
     private static void traversingMethodsInCollection(Theatre theatre) {
@@ -20,12 +98,12 @@ public class App {
 
         //stream
         System.out.println("Steam...");
-        copy1.stream().forEach(seat -> System.out.print(seat.getSeatNumber()+" "));
+        copy1.stream().forEach(seat -> System.out.print(seat.getSeatNumber() + " "));
         System.out.println();
 
         //parallelStream
         System.out.println("Parallel Stream...");
-        copy1.parallelStream().forEach(seat -> System.out.print(seat.getSeatNumber()+" "));
+        copy1.parallelStream().forEach(seat -> System.out.print(seat.getSeatNumber() + " "));
         System.out.println();
     }
 
@@ -111,11 +189,10 @@ public class App {
 //        for(int i=0; i<seatArrayCopy1.length; i++){
 //            System.out.println(seatArrayCopy1[i]);
 //        }
-//
-//        //<T> T[] toArray(T[] a)
+
+        //<T> T[] toArray(T[] a)
 //        System.out.println("<T> T[] toArray(T[] a)...");
-//        Seat[] seatArrayCopy2 = new Seat[copy2.size()];
-//        copy2.toArray(seatArrayCopy2);
+//        Seat[] seatArrayCopy2 = copy2.toArray(new Seat[0]);
 //        for(int i=0; i<seatArrayCopy2.length; i++){
 //            System.out.print(seatArrayCopy2[i].getSeatNumber()+" ");
 //        }
@@ -125,7 +202,7 @@ public class App {
 
     private static void displaySeats(Collection<Seat> copy1) {
         for (Seat s : copy1) {
-            System.out.println(s);
+            System.out.print(s.getSeatNumber() + " ");
         }
         System.out.println();
     }
