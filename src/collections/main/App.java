@@ -5,8 +5,53 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
+        dequeInterfaceOperations(theatre);
 
-        queueInterfaceOperations(theatre);
+
+    }
+
+    private static void dequeInterfaceOperations(Theatre theatre) {
+        //Deque is implemented by ArrayDeque and LinkedList
+        Deque<Seat> seatDeque = new ArrayDeque<>(theatre.getSeats());
+
+        /**
+         * The methods given in the Deque interface are divided into three parts:
+         *
+         * Insert
+         * The addfirst and offerFirst methods insert elements at the beginning of the Deque instance.
+         * The methods addLast and offerLast insert elements at the end of the Deque instance.
+         * When the capacity of the Deque instance is restricted, the preferred methods are offerFirst and offerLast because addFirst might fail to throw an exception if it is full.
+         *
+         *
+         */
+        displaySeats(seatDeque);
+        Seat s1 = new Seat("WOT");
+        seatDeque.addFirst(s1);
+        seatDeque.addLast(s1);
+        displaySeats(seatDeque);
+
+        /**
+         * Remove
+         *
+         * The removeFirst and pollFirst methods remove elements from the beginning of the Deque instance.
+         *
+         * The removeLast and pollLast methods remove elements from the end. The methods pollFirst and pollLast return null if the Deque is empty whereas the methods removeFirst and removeLast throw an exception if the Deque instance is empty.
+         */
+        seatDeque.removeFirst();
+        seatDeque.removeLast();
+        displaySeats(seatDeque);
+
+        /**
+         * Retrieve
+         * The methods getFirst and peekFirst retrieve the first element of the Deque instance.
+         * These methods dont remove the value from the Deque instance. Similarly, the methods getLast and peekLast retrieve the last element.
+         * The methods getFirst and getLast throw an exception if the deque instance is empty whereas the methods peekFirst and peekLast return NULL.
+         */
+        seatDeque.addFirst(s1);
+        seatDeque.addLast(s1);
+        System.out.println(seatDeque.getFirst());
+        System.out.println(seatDeque.getLast());
+        displaySeats(seatDeque);
     }
 
     private static void queueInterfaceOperations(Theatre theatre) {
