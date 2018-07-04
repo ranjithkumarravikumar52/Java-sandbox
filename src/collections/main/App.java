@@ -6,40 +6,23 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
-
-//        System.out.println("Shuffle");
-//        Collections.shuffle(theatre.getSeats());
-//        theatre.displaySeats();
-//
-//        System.out.println();
-//
-//        System.out.println("Sorted");
-//        Collections.sort(theatre.getSeats());
-//        theatre.displaySeats();
-//
-//        System.out.println();
-//
-//        System.out.println("Reverse");
-//        Collections.reverse(theatre.getSeats());
-//        theatre.displaySeats();
-//
-//        System.out.println("Min value(by seat name) " +Collections.min(theatre.getSeats()).getSeatNumber());
-//        System.out.println("Max value(by seat name) " +Collections.max(theatre.getSeats()).getSeatNumber());
-//
-//        System.out.println();
-//        Collections.swap(theatre.getSeats(), 0, theatre.getSeats().size() - 1);
 //        theatre.displaySeats();
 
-        List<Seat> newList = new LinkedList<>(theatre.getSeats());
-//        Collections.copy(newList, theatre.getSeats());
+        //conversion constructor
+        List<Seat> copy = new LinkedList<>(theatre.getSeats());
+//        displaySeats(copy);
 
-        newList.get(0).reserve();
+        //checking if changes in copy affects original
+        copy.get(0).reserve();
+        theatre.displaySeats();
+        displaySeats(copy);
+    }
 
-        for(Seat s: newList){
-            System.out.println(s+" ");
+    private static void displaySeats(List<Seat> copy) {
+        System.out.println("Seats in copy..");
+        for(Seat s: copy){
+            System.out.println(s);
         }
         System.out.println();
-        theatre.displaySeats();
-
     }
 }

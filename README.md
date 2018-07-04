@@ -568,6 +568,10 @@
 * Questions to practice
     * [Link](https://docs.oracle.com/javase/tutorial/collections/interfaces/QandE/questions.html)
 ***
+#### Collections Interface
+* Conversion constructor returns a copy of the collection with a newly created instance variable pointing to the original object. In other words, changes in the copy will affect the original 
+* 
+***
 * Aggregate operations 
 * Algorithms 
 * All the main operations will be practiced using a sample project called "Seat Reservation System"

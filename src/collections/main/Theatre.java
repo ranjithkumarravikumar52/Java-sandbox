@@ -1,6 +1,8 @@
 package collections.main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -50,8 +52,8 @@ public class Theatre {
     }
 
     /**
-     * <p>This method is used to practice implementing any search algorithms to get our requested in shortest amount of time</p>
-     * <p>In addition, how a search algorithm works for different underlying data structure</p>
+     * <p>This method is used to practice implementing any search algorithms to get our requested seat in shortest amount of time</p>
+     * <p>In addition, to check for how a search algorithm works for different underlying data structure</p>
      *
      * @param seatNumber
      * @return
@@ -68,7 +70,7 @@ public class Theatre {
 
     public void displaySeats() {
         for (Seat seatIndex : seats) {
-            System.out.println(seatIndex+" ");
+            System.out.println(seatIndex + " ");
         }
         System.out.println();
     }
