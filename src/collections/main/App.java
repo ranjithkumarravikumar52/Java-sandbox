@@ -2,13 +2,31 @@ package collections.main;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("AMC Charlotte", 4, 3);
-        basicCollectionOperations(theatre);
+//        basicCollectionOperations(theatre);
+
+        traversingMethodsInCollection(theatre);
+
+    }
+
+    private static void traversingMethodsInCollection(Theatre theatre) {
+        Collection<Seat> copy1 = new ArrayList<>(theatre.getSeats());
+        List<Seat> copyList = new ArrayList<>(theatre.getSeats());
+        Seat A1 = copyList.get(0);
+
+        //stream
+        System.out.println("Steam...");
+        copy1.stream().forEach(seat -> System.out.print(seat.getSeatNumber()+" "));
+        System.out.println();
+
+        //parallelStream
+        System.out.println("Parallel Stream...");
+        copy1.parallelStream().forEach(seat -> System.out.print(seat.getSeatNumber()+" "));
+        System.out.println();
     }
 
     private static void basicCollectionOperations(Theatre theatre) {
@@ -48,8 +66,8 @@ public class App {
          */
 
         //containsAll
-        Collection<Seat> copy1 = new ArrayList<>(theatre.getSeats());
-        Collection<Seat> copy2 = new LinkedList<>(theatre.getSeats());
+//        Collection<Seat> copy1 = new ArrayList<>(theatre.getSeats());
+//        Collection<Seat> copy2 = new LinkedList<>(theatre.getSeats());
 //        System.out.println("copy1.containsAll(copy2): " + copy1.containsAll(copy2));
 //
 //        //addAll
@@ -88,20 +106,20 @@ public class App {
          */
 
         //Object[] toArray()
-        System.out.println("Object[] toArray()...");
-        Object[] seatArrayCopy1 =  copy1.toArray();
-        for(int i=0; i<seatArrayCopy1.length; i++){
-            System.out.println(seatArrayCopy1[i]);
-        }
-
-        //<T> T[] toArray(T[] a)
-        System.out.println("<T> T[] toArray(T[] a)...");
-        Seat[] seatArrayCopy2 = new Seat[copy2.size()];
-        copy2.toArray(seatArrayCopy2);
-        for(int i=0; i<seatArrayCopy2.length; i++){
-            System.out.print(seatArrayCopy2[i].getSeatNumber()+" ");
-        }
-        System.out.println();
+//        System.out.println("Object[] toArray()...");
+//        Object[] seatArrayCopy1 =  copy1.toArray();
+//        for(int i=0; i<seatArrayCopy1.length; i++){
+//            System.out.println(seatArrayCopy1[i]);
+//        }
+//
+//        //<T> T[] toArray(T[] a)
+//        System.out.println("<T> T[] toArray(T[] a)...");
+//        Seat[] seatArrayCopy2 = new Seat[copy2.size()];
+//        copy2.toArray(seatArrayCopy2);
+//        for(int i=0; i<seatArrayCopy2.length; i++){
+//            System.out.print(seatArrayCopy2[i].getSeatNumber()+" ");
+//        }
+//        System.out.println();
 
     }
 
