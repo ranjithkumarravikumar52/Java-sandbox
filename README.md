@@ -667,6 +667,13 @@
 * [Doc](https://docs.oracle.com/javase/tutorial/datetime/)
 * 
 ***
+### Day of the exam tips
+* You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
+    * B Brackets first 
+    * O Orders (i.e. Powers and Square Roots, etc.) 
+    * DM Division and Multiplication (left-to-right) 
+    * AS Addition and Subtraction (left-to-right) 
+***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
