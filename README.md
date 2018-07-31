@@ -673,6 +673,9 @@
     * O Orders (i.e. Powers and Square Roots, etc.) 
     * DM Division and Multiplication (left-to-right) 
     * AS Addition and Subtraction (left-to-right) 
+* When shadowing is present use the `this` operator
+* While overloading methods, compiler doesn't care about the method return type
+* But when overriding methods, return types should match
 ***
 ### IntelliJ Tips
 * Auto format in IntelliJ - `Ctrl + Alt + L`
