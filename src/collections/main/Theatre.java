@@ -1,9 +1,6 @@
 package collections.main;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -18,7 +15,8 @@ import java.util.List;
  */
 public class Theatre {
     private final String theatreName;
-    private List<Seat> seats = new ArrayList<>();
+    private List<Seat> seats = new LinkedList<>();
+
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -41,6 +39,8 @@ public class Theatre {
                 seats.add(seat);
             }
         }
+
+
     }
 
     public List<Seat> getSeats() {
