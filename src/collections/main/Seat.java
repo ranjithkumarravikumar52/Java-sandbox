@@ -4,16 +4,10 @@ import java.util.Comparator;
 
 public class Seat implements Comparable<Seat> {
 
+    static final Comparator<Seat> SEAT_COMPARATOR_PRICE = Comparator.comparingDouble(Seat::getPrice);
     private String seatNumber;
     private double price;
     private boolean reserved;
-
-    static final Comparator<Seat> SEAT_COMPARATOR_PRICE = new Comparator<Seat>() {
-        @Override
-        public int compare(Seat o1, Seat o2) {
-            return Double.compare(o1.getPrice(), o2.getPrice());
-        }
-    };
 
     public Seat(String seatNumber) {
         this.seatNumber = seatNumber;
@@ -33,11 +27,11 @@ public class Seat implements Comparable<Seat> {
         return price;
     }
 
-    public boolean isReserved() {
+    boolean isReserved() {
         return reserved;
     }
 
-    public boolean reserve() {
+    boolean reserve() {
         if (!reserved) {
             reserved = true;
 //            System.out.println("seatNumber = " + seatNumber + " is reserved");
@@ -60,14 +54,13 @@ public class Seat implements Comparable<Seat> {
 
     @Override
     public String toString() {
-        return seatNumber+", " + price +", "+ reserved+"; ";
+        return seatNumber + ", " + price + ", " + reserved ;
     }
 
     @Override
     public int compareTo(Seat o) {
         return this.seatNumber.compareToIgnoreCase(o.getSeatNumber());
     }
-
 
 
 }
