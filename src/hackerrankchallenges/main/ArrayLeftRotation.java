@@ -7,32 +7,35 @@ import java.util.List;
 
 public class ArrayLeftRotation {
     public static void main(String[] args) {
-        int[] a = new int[10];
-        for(int i =0; i<a.length; i++){
-            a[i] = i;
-        }
+        int[] ints = { 1, 2, 3, 4, 5};
+        int d = 4;
 
-//        //how to convert out int array to List
-//        List<Integer> integerList = new ArrayList<>();
-//        for(int i =0; i<a.length; i++){
-//            integerList.add(a[i]);
-//        }
-//
-//        //use collections rotate
-//        Collections.rotate(integerList, 2);
-//
-//        //convert the list to int[]
-//        Integer[] returnArray = new Integer[a.length];
-//        returnArray = integerList.toArray(returnArray);
-//
-//        printArray(returnArray);
+        System.out.println("Before Rotation");
+        printArray(ints);
+
+        int[] newInts = arrayLeftRotation(ints, d);
+        System.out.println("After rotation");
+        printArray(newInts);
 
 
     }
 
-    private static void printArray(int[] a) {
-        for(int i =0; i<a.length; i++){
-            System.out.print(a[i]+" ");
+    private static int[] arrayLeftRotation(int[] old, int d) {
+        int[] newInts = new int[old.length];
+        for(int i = d, j = 0; j < old.length; i++, j++){
+            newInts[j] = old[i];
+            if(i == old.length - 1){
+                i = -1;
+            }
         }
+        return  newInts;
+
+    }
+
+    private static void printArray(int[] ints) {
+        for(int i: ints){
+            System.out.print(i+" ");
+        }
+        System.out.println();
     }
 }
