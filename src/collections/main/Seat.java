@@ -19,11 +19,11 @@ public class Seat implements Comparable<Seat> {
         reserved = false;
     }
 
-    private String getSeatNumber() {
+    public String getSeatNumber() {
         return seatNumber;
     }
 
-    private double getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -54,7 +54,7 @@ public class Seat implements Comparable<Seat> {
 
     @Override
     public String toString() {
-        return seatNumber + ", " + price + ", " + reserved + "; ";
+        return seatNumber + ", " + price + ", " + reserved ;
     }
 
     @Override

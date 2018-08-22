@@ -80,7 +80,7 @@ public class Theatre {
     /**
      * Implemented using anonymous class
      */
-    public void displaySeatsByPrice() {
+    void displaySeatsByPrice() {
         this.seats.sort(Seat.SEAT_COMPARATOR_PRICE);
         System.out.println("DISPLAY BY PRICE");
         System.out.println("================");
@@ -105,4 +105,11 @@ public class Theatre {
         System.out.println("============================");
         displaySeats();
     }
+
+    /**
+     * Ideal Use cases for Lambda Expression. From here, we gonna build our case on why we need to use Lambda expression and what are the drawbacks of using traditional way of writing methods for search criteria.
+     *
+     */
+
+
 }

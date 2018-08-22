@@ -9,8 +9,8 @@ public class TheatreTest {
 
     @Test
     public void totalSeatsCountTest(){
-        Theatre theatre = new Theatre("AMC", 10, 15);
-        assertEquals(10*15, theatre.getSeats().size());
+        Theatre theatre = new Theatre("AMC", 10, 10);
+        assertEquals(10*10, theatre.getSeats().size());
     }
 
 
