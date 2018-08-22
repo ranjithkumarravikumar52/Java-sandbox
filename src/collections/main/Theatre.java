@@ -1,6 +1,9 @@
 package collections.main;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * When the following Concrete classes are used, it assigns values based on the underlying data structure
@@ -16,7 +19,6 @@ import java.util.*;
 public class Theatre {
     private final String theatreName;
     private List<Seat> seats = new LinkedList<>();
-
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -60,7 +62,7 @@ public class Theatre {
      * <p>This method is used to practice implementing any search algorithms to get our requested seat in shortest amount of time</p>
      * <p>In addition, to check for how a search algorithm works for different underlying data structure</p>
      */
-    public Seat searchSeat(String seatNumber) {
+    private Seat searchSeat(String seatNumber) {
         Seat requestedSeat = new Seat(seatNumber);
         int result = Collections.binarySearch(seats, requestedSeat);
         if (result >= 0) {
@@ -79,7 +81,7 @@ public class Theatre {
      * Implemented using anonymous class
      */
     public void displaySeatsByPrice() {
-        Collections.sort(this.seats, Seat.SEAT_COMPARATOR_PRICE);
+        this.seats.sort(Seat.SEAT_COMPARATOR_PRICE);
         System.out.println("DISPLAY BY PRICE");
         System.out.println("================");
         displaySeats();
