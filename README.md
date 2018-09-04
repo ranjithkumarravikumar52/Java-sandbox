@@ -667,6 +667,13 @@
 * [Doc](https://docs.oracle.com/javase/tutorial/datetime/)
 * 
 ***
+### Java Concurrency
+* To "run" a new thread use start() rather than directly calling run() method (calling run() directly will not create a new thread but instead the method gets executed in the current thread)
+* What does join() do?
+    * Calling thread(method) gets suspended till called thread either gets executed completely or timed out
+* Sample exercise
+    * Implement two threads that provides a countdown functionality based on a local variable vs instance variables. Are the results same in both cases?
+***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
     * B Brackets first 
