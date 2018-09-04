@@ -6,7 +6,7 @@ import concurrency.util.ThreadColor;
  * In this code, we gonna implement two threads that are going to countdown using a local variable
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Countdown countdown = new Countdown();
 
         //create two threads (subclass of Thread method)
@@ -28,7 +28,6 @@ class Countdown {
     public void doCountdown() {
         String color;
 
-
         switch (Thread.currentThread().getName()) {
             case "Thread 1":
                 color = ThreadColor.ANSI_CYAN;
@@ -40,9 +39,13 @@ class Countdown {
                 color = ThreadColor.ANSI_GREEN;
 
         }
-        for (i = 10; i > 0; i--) {
-            System.out.println(color + Thread.currentThread().getName() + ": " + i);
+        //what is the common object shared by every thread
+        synchronized(this){
+            for (i = 10; i > 0; i--) {
+                System.out.println(color + Thread.currentThread().getName() + ": " + i);
+            }
         }
+
     }
 }
 

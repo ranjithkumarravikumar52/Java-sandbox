@@ -671,8 +671,17 @@
 * To "run" a new thread use start() rather than directly calling run() method (calling run() directly will not create a new thread but instead the method gets executed in the current thread)
 * What does join() do?
     * Calling thread(method) gets suspended till called thread either gets executed completely or timed out
+    * Helps in maintaining an order of execution
 * Sample exercise
     * Implement two threads that provides a countdown functionality based on a local variable vs instance variables. Are the results same in both cases?
+    * Results: Threads can be suspended between 2 statements. 
+* What is interleaving? What is thread-interference? What is a share-condition?
+* What is synchronization? 
+    * Process of controlling a shared resource by the threads 
+    * Can we provide synchrozination to constructors? 
+        * No, only to statements and methods
+    * Primitive types dont have an intrinsic locks
+    
 ***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
