@@ -20,18 +20,28 @@ class Message {
 
     public synchronized String read() {
         while (empty) {
+            try {
+                wait();
+            } catch (InterruptedException ex) {
 
+            }
         }
         empty = true;
+        notifyAll();
         return message;
     }
 
     public synchronized void write(String message) {
         while (!empty) {
+            try {
+                wait();
+            } catch (InterruptedException ex) {
 
+            }
         }
         empty = false;
         this.message = message;
+        notifyAll();
     }
 }
 
