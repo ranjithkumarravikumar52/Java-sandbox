@@ -681,7 +681,14 @@
     * Can we provide synchrozination to constructors? 
         * No, only to statements and methods
     * Primitive types dont have an intrinsic locks
-    
+    * We can also synchronize static statements
+***
+* What is reentrant?
+    * The thread can acquire a lock that it already owns 
+* What is a critical section? 
+    * Section of code which is a common resource to all the threads
+* What is thread-safe? 
+    * All the critical sections in a code has been synchronized
 ***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
