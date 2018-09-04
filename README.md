@@ -689,6 +689,7 @@
     * Section of code which is a common resource to all the threads
 * What is thread-safe? 
     * All the critical sections in a code has been synchronized
+* What are atomic operations?
 ***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
