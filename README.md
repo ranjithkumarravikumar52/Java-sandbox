@@ -691,6 +691,16 @@
     * All the critical sections in a code has been synchronized
 * What are atomic operations?
 ***
+### Regular expressions
+* The simplest form of regular expression is a string literal (The string represented in double-quotes. Ex: "Hello")
+* Character classes
+    * It's like a wild card, it represents a set or class of characters
+* Boundary matcher
+    * It looks for boundary matching like beginning, end of a string, or a word
+* matches() -> returns true if there's a match
+    * TWIST: even though we made a match and replaced with YYYY earlier, it gives out false, cos string matches for the whole match. Doesn't work for partial match
+* 
+***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
     * B Brackets first 
