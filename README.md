@@ -683,7 +683,7 @@
     * Primitive types dont have an intrinsic locks
     * We can also synchronize static statements
 ***
-* What is reentrant?
+* What is re-entrant?
     * The thread can acquire a lock that it already owns 
 * What is a critical section? 
     * Section of code which is a common resource to all the threads
