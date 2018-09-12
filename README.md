@@ -678,12 +678,12 @@
 * What is interleaving? What is thread-interference? What is a share-condition?
 * What is synchronization? 
     * Process of controlling a shared resource by the threads 
-    * Can we provide synchrozination to constructors? 
+    * Can we provide synchronisation to constructors? 
         * No, only to statements and methods
-    * Primitive types dont have an intrinsic locks
+    * Primitive types don't have an intrinsic locks
     * We can also synchronize static statements
 ***
-* What is reentrant?
+* What is re-entrant?
     * The thread can acquire a lock that it already owns 
 * What is a critical section? 
     * Section of code which is a common resource to all the threads
@@ -691,15 +691,14 @@
     * All the critical sections in a code has been synchronized
 * What are atomic operations?
 ***
-### Regular expressions
-* The simplest form of regular expression is a string literal (The string represented in double-quotes. Ex: "Hello")
-* Character classes
-    * It's like a wild card, it represents a set or class of characters
-* Boundary matcher
-    * It looks for boundary matching like beginning, end of a string, or a word
-* matches() -> returns true if there's a match
-    * TWIST: even though we made a match and replaced with YYYY earlier, it gives out false, cos string matches for the whole match. Doesn't work for partial match
-* 
+* Concurrent Collections
+    * CountDownLatch
+    * Cyclic barrier
+    * Blocking queue
+    * Delay queue
+    * Priority queue
+    * Concurrent Maps
+    * Exchanger
 ***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
