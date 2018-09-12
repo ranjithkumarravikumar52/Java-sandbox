@@ -678,9 +678,9 @@
 * What is interleaving? What is thread-interference? What is a share-condition?
 * What is synchronization? 
     * Process of controlling a shared resource by the threads 
-    * Can we provide synchrozination to constructors? 
+    * Can we provide synchronisation to constructors? 
         * No, only to statements and methods
-    * Primitive types dont have an intrinsic locks
+    * Primitive types don't have an intrinsic locks
     * We can also synchronize static statements
 ***
 * What is re-entrant?
@@ -690,6 +690,15 @@
 * What is thread-safe? 
     * All the critical sections in a code has been synchronized
 * What are atomic operations?
+***
+* Concurrent Collections
+    * CountDownLatch
+    * Cyclic barrier
+    * Blocking queue
+    * Delay queue
+    * Priority queue
+    * Concurrent Maps
+    * Exchanger
 ***
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
