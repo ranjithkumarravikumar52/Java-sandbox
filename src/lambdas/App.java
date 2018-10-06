@@ -94,7 +94,7 @@ class AnotherClass {
 
 
 //        System.out.println("The another class's name: "+getClass().getSimpleName()); //AnotherClass
-//        return App.doStringStuff(new UpperConcat() {
+//        return Client.doStringStuff(new UpperConcat() {
 //            @Override
 //            public String upperAndConcat(String s1, String s2) {
 //                System.out.println("The another class's name: "+getClass().getSimpleName()); // {empty}
