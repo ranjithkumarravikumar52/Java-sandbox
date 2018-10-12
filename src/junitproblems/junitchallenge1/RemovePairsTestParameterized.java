@@ -1,4 +1,4 @@
-package junitchallenge1;
+package junitproblems.junitchallenge1;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

@@ -1,4 +1,4 @@
-package junitpractice;
+package junitproblems.junitchallenge2;
 
 public class BankAccount {
 

@@ -1,6 +1,6 @@
-package ocppractice.main.controller;
+package designpatterns.openclosedprinciple.main.controller;
 
-import ocppractice.main.devices.Device;
+import designpatterns.openclosedprinciple.main.devices.Device;
 
 /**
  * This class should handle responsibilities about the RemoteControl class only.

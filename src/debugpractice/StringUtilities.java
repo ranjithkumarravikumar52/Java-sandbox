@@ -1,4 +1,4 @@
-package testingconcepts;
+package debugpractice;
 
 public class StringUtilities {
     private StringBuilder sBuilder = new StringBuilder();

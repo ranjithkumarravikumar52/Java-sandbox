@@ -1,4 +1,4 @@
-package junitchallenge1;
+package junitproblems.junitchallenge1;
 
 
 public class Utilities {

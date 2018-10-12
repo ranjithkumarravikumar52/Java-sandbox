@@ -1,10 +1,10 @@
-package ocppractice.test;
+package designpatterns.openclosedprinciple.test;
 
-import ocppractice.main.controller.RemoteControl;
-import ocppractice.main.devices.Device;
-import ocppractice.main.devices.Projector;
-import ocppractice.main.devices.SoundSystem;
-import ocppractice.main.devices.TV;
+import designpatterns.openclosedprinciple.main.controller.RemoteControl;
+import designpatterns.openclosedprinciple.main.devices.Device;
+import designpatterns.openclosedprinciple.main.devices.Projector;
+import designpatterns.openclosedprinciple.main.devices.SoundSystem;
+import designpatterns.openclosedprinciple.main.devices.TV;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

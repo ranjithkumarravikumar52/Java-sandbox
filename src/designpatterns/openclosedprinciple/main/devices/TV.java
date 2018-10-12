@@ -1,4 +1,4 @@
-package ocppractice.main.devices;
+package designpatterns.openclosedprinciple.main.devices;
 
 public class TV extends Device {
 

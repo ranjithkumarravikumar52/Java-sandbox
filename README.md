@@ -468,12 +468,12 @@
     * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
 ***
 ### JUnit
-* Unit testingconcepts generally is first line of defense in testingconcepts
+* Unit debugpractice generally is first line of defense in debugpractice
 * Mostly done by developers/programmers themselves
-* Old-school testingconcepts was done by manually sending test values to a method and check if expected and actual results are same
+* Old-school debugpractice was done by manually sending test values to a method and check if expected and actual results are same
 * However, it becomes a problematic if the method changes, then the test values has to be re-changed
-* To avoid, people make use of testingconcepts framework.
-* In this branch we gonna use java's testingconcepts framework called JUnit to run automated tests in our code
+* To avoid, people make use of debugpractice framework.
+* In this branch we gonna use java's debugpractice framework called JUnit to run automated tests in our code
 * Easiest way to create test class is using `Alt + Enter` on the current class
 * Scope is `compile time` for the Test class
 * Test methods should always be `public` and return type `void`
@@ -484,7 +484,7 @@
     * Test method should run independently
 * So, only one assert per test method/condition
 * Using filters to examine all your tests
-* When testingconcepts a value against true or false, use assertTrue or assertFalse
+* When debugpractice a value against true or false, use assertTrue or assertFalse
 * `@Before`
     * runs before every test method
 * `@After`

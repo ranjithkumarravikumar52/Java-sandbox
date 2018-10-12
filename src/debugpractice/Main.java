@@ -1,4 +1,4 @@
-package testingconcepts;
+package debugpractice;
 
 public class Main {
 

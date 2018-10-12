@@ -1,9 +1,9 @@
-package ocppractice.main.User;
+package designpatterns.openclosedprinciple.main.User;
 
-import ocppractice.main.controller.RemoteControl;
-import ocppractice.main.devices.Device;
-import ocppractice.main.devices.Projector;
-import ocppractice.main.devices.TV;
+import designpatterns.openclosedprinciple.main.controller.RemoteControl;
+import designpatterns.openclosedprinciple.main.devices.Device;
+import designpatterns.openclosedprinciple.main.devices.Projector;
+import designpatterns.openclosedprinciple.main.devices.TV;
 
 public class Person {
 

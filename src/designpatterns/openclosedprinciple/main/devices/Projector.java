@@ -1,6 +1,6 @@
-package ocppractice.main.devices;
+package designpatterns.openclosedprinciple.main.devices;
 
-public class SoundSystem extends Device {
+public class Projector extends Device {
     /**
      * Any device that is brought into this world should be forced to instantiated by the following.
      * This of this constructor as a new device just got into the house and connected to power supply and just ready to use.
@@ -8,17 +8,17 @@ public class SoundSystem extends Device {
      *
      * @param deviceName Name of the device
      */
-    public SoundSystem(String deviceName) {
+    public Projector(String deviceName) {
         super(deviceName);
     }
 
     @Override
     public void turnOn() {
-        System.out.println("Sound system is on...");
+        System.out.println("Projector screen is down...");
     }
 
     @Override
     public void turnOff() {
-        System.out.println("Sound system is off...");
+        System.out.println("Projector screen is up....");
     }
 }
