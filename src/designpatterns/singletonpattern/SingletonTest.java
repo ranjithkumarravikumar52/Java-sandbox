@@ -4,7 +4,7 @@ public class SingletonTest {
 
     private static SingletonTest INSTANCE = null;
 
-    //For testing how many objects we have created
+    //For testingconcepts how many objects we have created
     private static int counter;
 
     //to deny access

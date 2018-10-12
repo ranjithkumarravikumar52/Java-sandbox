@@ -468,12 +468,12 @@
     * Method runs indefinitely because the exit condition for the loop has failed (length always remains zero in here)
 ***
 ### JUnit
-* Unit testing generally is first line of defense in Testing
+* Unit testingconcepts generally is first line of defense in testingconcepts
 * Mostly done by developers/programmers themselves
-* Old-school testing was done by manually sending test values to a method and check if expected and actual results are same
+* Old-school testingconcepts was done by manually sending test values to a method and check if expected and actual results are same
 * However, it becomes a problematic if the method changes, then the test values has to be re-changed
-* To avoid, people make use of testing framework.
-* In this branch we gonna use java's testing framework called JUnit to run automated tests in our code
+* To avoid, people make use of testingconcepts framework.
+* In this branch we gonna use java's testingconcepts framework called JUnit to run automated tests in our code
 * Easiest way to create test class is using `Alt + Enter` on the current class
 * Scope is `compile time` for the Test class
 * Test methods should always be `public` and return type `void`
@@ -484,7 +484,7 @@
     * Test method should run independently
 * So, only one assert per test method/condition
 * Using filters to examine all your tests
-* When testing a value against true or false, use assertTrue or assertFalse
+* When testingconcepts a value against true or false, use assertTrue or assertFalse
 * `@Before`
     * runs before every test method
 * `@After`
@@ -507,11 +507,11 @@
     * Write `@Parameterized.Parameters` to enable `static` parameters to be passed into a test case
 
 ***
-### Generics
+### generics
 * since 1.5
 * Before generics, class case exception was a major run-time nightmare for many
 ***
-* Generics can be applied to class, methods and interfaces
+* generics can be applied to class, methods and interfaces
 ***
 * Comparable interface
     * Restricting to compare two classes with the same type parameters
@@ -520,10 +520,10 @@
     * Collections.sort() depends on this method
 ***
 * Be careful of using raw types in your code, which will give you a warning of "unchecked warning"
-    * Resolve that warning using Generics
+    * Resolve that warning using generics
 * There's a much better java doc by oracle which does a great job explaining these concepts
-    * ["Basic Generics"](https://docs.oracle.com/javase/tutorial/java/generics/why.html)
-    * ["Advanced Generics"](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
+    * ["Basic generics"](https://docs.oracle.com/javase/tutorial/java/generics/why.html)
+    * ["Advanced generics"](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
 ***
 * Challenge
 * `      // Create a generic class to implement a league table for a sport.
