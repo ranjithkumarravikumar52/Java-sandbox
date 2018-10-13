@@ -1,6 +1,6 @@
-package concurrency.parallelcomputing.divisors.test;
+package concurrency.parallelcomputing.countdivisors.test;
 
-import concurrency.parallelcomputing.divisors.util.DivisorCalculation;
+import concurrency.parallelcomputing.countdivisors.util.DivisorCalculation;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

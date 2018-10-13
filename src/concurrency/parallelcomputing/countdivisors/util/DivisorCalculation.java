@@ -1,12 +1,12 @@
-package concurrency.parallelcomputing.divisors.util;
+package concurrency.parallelcomputing.countdivisors.util;
 
 public class DivisorCalculation {
 
     /**
-     * Counts number of divisors for a given non-negative number
+     * Counts number of countdivisors for a given non-negative number
      *
      * @param number
-     * @return 0 if number is 0, -1 if number is a negative number, positive number with a count for the total number of divisors for a given count
+     * @return 0 if number is 0, -1 if number is a negative number, positive number with a count for the total number of countdivisors for a given count
      */
     public static int countDivisorsOfANumber(int number) {
         if (number == 0) {

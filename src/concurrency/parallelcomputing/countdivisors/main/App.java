@@ -1,9 +1,9 @@
-package concurrency.parallelcomputing.divisors.main;
+package concurrency.parallelcomputing.countdivisors.main;
 
 import java.util.*;
 
-import static concurrency.parallelcomputing.divisors.util.DivisorCalculation.countHighestDivisorCount;
-import static concurrency.parallelcomputing.divisors.util.DivisorCalculation.getHighestDivisorCountInARange;
+import static concurrency.parallelcomputing.countdivisors.util.DivisorCalculation.countHighestDivisorCount;
+import static concurrency.parallelcomputing.countdivisors.util.DivisorCalculation.getHighestDivisorCountInARange;
 
 public class App {
 
