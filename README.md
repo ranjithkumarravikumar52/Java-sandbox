@@ -134,7 +134,7 @@
 ***
 * Operators can be applied to one, two or three operands
 * Java follows operator precedence when two operators have same precedence
-    * It evaluates from left to right
+    * It evaluates from leftChopstick to rightChopstick
 ***
 * `int a  = 3 - 2 + 2 * 2 + 3`
     * a = 8;
@@ -457,7 +457,7 @@
 * `Resume program` and `Run program` are entirely different
 * `Add variable` to `watch point` to examine its value during debug
 * `Field watch points` - whenever the value is changed, the application suspends
-    * Use `ALT+left click` to set up field watch point.
+    * Use `ALT+leftChopstick click` to set up field watch point.
 * `Smart step into` - gives us options to choose the method to step into
 ***
 ### Debugging challenge
@@ -477,7 +477,7 @@
 * Easiest way to create test class is using `Alt + Enter` on the current class
 * Scope is `compile time` for the Test class
 * Test methods should always be `public` and return type `void`
-* Create a test method with annotations `@org.junit.Test` right above the method to enable IDE to test that method
+* Create a test method with annotations `@org.junit.Test` rightChopstick above the method to enable IDE to test that method
 * `Assert(expectedResult, actualResult)`
 * We can have more than one assertion in a method, however it's a bad practice because
     * Test method should always be self-contained
@@ -704,8 +704,8 @@
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
     * B Brackets first 
     * O Orders (i.e. Powers and Square Roots, etc.) 
-    * DM Division and Multiplication (left-to-right) 
-    * AS Addition and Subtraction (left-to-right) 
+    * DM Division and Multiplication (leftChopstick-to-rightChopstick) 
+    * AS Addition and Subtraction (leftChopstick-to-rightChopstick) 
 * When shadowing is present use the `this` operator
 * While overloading methods, compiler doesn't care about the method return type
 * But when overriding methods, return types should match
@@ -714,7 +714,7 @@
 * Auto format in IntelliJ - `Ctrl + Alt + L`
 * Auto import `Ctrl + Alt + O` 
 * Using "structure" in the intellij to understand hierarchy and visibility of the classes. 
-* Use "messages" to check for any warnings and always aim to write a "good" code by making sure a green tick is shown at the top right of the screen
+* Use "messages" to check for any warnings and always aim to write a "good" code by making sure a green tick is shown at the top rightChopstick of the screen
 ***
 ### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
