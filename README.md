@@ -665,7 +665,6 @@
 ***
 ### Data and time (Java 8)
 * [Doc](https://docs.oracle.com/javase/tutorial/datetime/)
-* 
 ***
 ### Java Concurrency
 * To "run" a new thread use start() rather than directly calling run() method (calling run() directly will not create a new thread but instead the method gets executed in the current thread)
@@ -700,6 +699,24 @@
     * Concurrent Maps
     * Exchanger
 ***
+### Design Patterns
+##### CodeBuilder exercise
+![First Attempt](src/main/resources/CodeBuilder.png?raw=true "First Attempt")
+
+***
+![In progress](src/main/resources/CodeBuilder(1).png?raw=true "First Attempt")
+    
+***
+
+***
+![In progress](src/main/resources/CodeBuilder(2).png?raw=true "First Attempt")
+    
+***
+***
+![In progress](src/main/resources/CodeBuilder(3).png?raw=true "First Attempt")
+    
+***
+
 ### Day of the exam tips
 * You may get a few very simple questions about operator preference. Simple school math trick of BODMAS can be used to evaluate the expressions.  
     * B Brackets first 
@@ -719,6 +736,7 @@
 ### Issues
 * [Unable to push using git in IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000126424-Intermittent-failure-using-Git-unable-to-read-askpass)
 * [When you should use static methods in a class](https://stackoverflow.com/questions/2671496/java-when-to-use-static-methods)
+* [How to add images to your readme.md](https://stackoverflow.com/questions/14494747/add-images-to-readme-md-on-github)
 
 ### Thanks and Credits
 * Inspired and learned these information from [Tim Buchalka](https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview)
