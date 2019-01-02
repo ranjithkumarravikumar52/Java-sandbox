@@ -1,4 +1,4 @@
-package designpatterns.factorypattern.vehicles;
+package designpatterns.factorypattern.vehicleexample.vehicles;
 
 public class Truck implements Vehicle {
     @Override

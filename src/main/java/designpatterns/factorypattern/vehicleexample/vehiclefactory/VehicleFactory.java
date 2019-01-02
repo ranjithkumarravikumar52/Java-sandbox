@@ -1,6 +1,6 @@
-package designpatterns.factorypattern.vehiclefactory;
+package designpatterns.factorypattern.vehicleexample.vehiclefactory;
 
-import designpatterns.factorypattern.vehicles.*;
+import designpatterns.factorypattern.vehicleexample.vehicles.*;
 
 public class VehicleFactory {
 

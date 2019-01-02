@@ -1,8 +1,8 @@
-package designpatterns.factorypattern.client;
+package designpatterns.factorypattern.vehicleexample.client;
 
-import designpatterns.factorypattern.vehiclefactory.VehicleFactory;
-import designpatterns.factorypattern.vehiclefactory.VehicleType;
-import designpatterns.factorypattern.vehicles.Vehicle;
+import designpatterns.factorypattern.vehicleexample.vehiclefactory.VehicleFactory;
+import designpatterns.factorypattern.vehicleexample.vehiclefactory.VehicleType;
+import designpatterns.factorypattern.vehicleexample.vehicles.Vehicle;
 
 public class App {
     public static void main(String[] args) {
